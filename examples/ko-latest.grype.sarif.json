@@ -1,0 +1,604 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://json.schemastore.org/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "Grype",
+          "version": "0.51.0",
+          "informationUri": "https://github.com/anchore/grype",
+          "rules": [
+            {
+              "id": "CVE-2015-5237-google.golang.org/protobuf",
+              "name": "GoModuleMatcherCpeMatch",
+              "shortDescription": {
+                "text": "CVE-2015-5237 high vulnerability for google.golang.org/protobuf package"
+              },
+              "fullDescription": {
+                "text": "protobuf allows remote authenticated attackers to cause a heap-based buffer overflow."
+              },
+              "helpUri": "https://github.com/anchore/grype",
+              "help": {
+                "text": "Vulnerability CVE-2015-5237\nSeverity: high\nPackage: google.golang.org/protobuf\nVersion: v1.28.1\nFix Version: \nType: go-module\nLocation: /usr/bin/ko\nData Namespace: nvd:cpe\nLink: [CVE-2015-5237](https://nvd.nist.gov/vuln/detail/CVE-2015-5237)",
+                "markdown": "**Vulnerability CVE-2015-5237**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | google.golang.org/protobuf  | v1.28.1  |   | go-module  | /usr/bin/ko  | nvd:cpe  | [CVE-2015-5237](https://nvd.nist.gov/vuln/detail/CVE-2015-5237)  |\n"
+              },
+              "properties": {
+                "security-severity": "8.8"
+              }
+            },
+            {
+              "id": "CVE-2021-22570-google.golang.org/protobuf",
+              "name": "GoModuleMatcherCpeMatch",
+              "shortDescription": {
+                "text": "CVE-2021-22570 medium vulnerability for google.golang.org/protobuf package"
+              },
+              "fullDescription": {
+                "text": "Nullptr dereference when a null char is present in a proto symbol. The symbol is parsed incorrectly, leading to an unchecked call into the proto file's name during generation of the resulting error message. Since the symbol is incorrectly parsed, the file is nullptr. We recommend upgrading to version 3.15.0 or greater."
+              },
+              "helpUri": "https://github.com/anchore/grype",
+              "help": {
+                "text": "Vulnerability CVE-2021-22570\nSeverity: medium\nPackage: google.golang.org/protobuf\nVersion: v1.28.1\nFix Version: \nType: go-module\nLocation: /usr/bin/ko\nData Namespace: nvd:cpe\nLink: [CVE-2021-22570](https://nvd.nist.gov/vuln/detail/CVE-2021-22570)",
+                "markdown": "**Vulnerability CVE-2021-22570**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | google.golang.org/protobuf  | v1.28.1  |   | go-module  | /usr/bin/ko  | nvd:cpe  | [CVE-2021-22570](https://nvd.nist.gov/vuln/detail/CVE-2021-22570)  |\n"
+              },
+              "properties": {
+                "security-severity": "5.5"
+              }
+            },
+            {
+              "id": "CVE-2022-28391-busybox",
+              "name": "ApkMatcherCpeMatch",
+              "shortDescription": {
+                "text": "CVE-2022-28391 high vulnerability for busybox package"
+              },
+              "fullDescription": {
+                "text": "BusyBox through 1.35.0 allows remote attackers to execute arbitrary code if netstat is used to print a DNS PTR record's value to a VT compatible terminal. Alternatively, the attacker could choose to change the terminal's colors."
+              },
+              "helpUri": "https://github.com/anchore/grype",
+              "help": {
+                "text": "Vulnerability CVE-2022-28391\nSeverity: high\nPackage: busybox\nVersion: 1.35.0-r27\nFix Version: \nType: apk\nLocation: /lib/apk/db/installed\nData Namespace: nvd:cpe\nLink: [CVE-2022-28391](https://nvd.nist.gov/vuln/detail/CVE-2022-28391)",
+                "markdown": "**Vulnerability CVE-2022-28391**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | busybox  | 1.35.0-r27  |   | apk  | /lib/apk/db/installed  | nvd:cpe  | [CVE-2022-28391](https://nvd.nist.gov/vuln/detail/CVE-2022-28391)  |\n"
+              },
+              "properties": {
+                "security-severity": "8.8"
+              }
+            },
+            {
+              "id": "CVE-2022-28391-busybox-binsh",
+              "name": "ApkMatcherCpeMatch",
+              "shortDescription": {
+                "text": "CVE-2022-28391 high vulnerability for busybox-binsh package"
+              },
+              "fullDescription": {
+                "text": "BusyBox through 1.35.0 allows remote attackers to execute arbitrary code if netstat is used to print a DNS PTR record's value to a VT compatible terminal. Alternatively, the attacker could choose to change the terminal's colors."
+              },
+              "helpUri": "https://github.com/anchore/grype",
+              "help": {
+                "text": "Vulnerability CVE-2022-28391\nSeverity: high\nPackage: busybox-binsh\nVersion: 1.35.0-r27\nFix Version: \nType: apk\nLocation: /lib/apk/db/installed\nData Namespace: nvd:cpe\nLink: [CVE-2022-28391](https://nvd.nist.gov/vuln/detail/CVE-2022-28391)",
+                "markdown": "**Vulnerability CVE-2022-28391**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | busybox-binsh  | 1.35.0-r27  |   | apk  | /lib/apk/db/installed  | nvd:cpe  | [CVE-2022-28391](https://nvd.nist.gov/vuln/detail/CVE-2022-28391)  |\n"
+              },
+              "properties": {
+                "security-severity": "8.8"
+              }
+            },
+            {
+              "id": "CVE-2022-28391-busybox-mdev-openrc",
+              "name": "ApkMatcherCpeMatch",
+              "shortDescription": {
+                "text": "CVE-2022-28391 high vulnerability for busybox-mdev-openrc package"
+              },
+              "fullDescription": {
+                "text": "BusyBox through 1.35.0 allows remote attackers to execute arbitrary code if netstat is used to print a DNS PTR record's value to a VT compatible terminal. Alternatively, the attacker could choose to change the terminal's colors."
+              },
+              "helpUri": "https://github.com/anchore/grype",
+              "help": {
+                "text": "Vulnerability CVE-2022-28391\nSeverity: high\nPackage: busybox-mdev-openrc\nVersion: 1.35.0-r27\nFix Version: \nType: apk\nLocation: /lib/apk/db/installed\nData Namespace: nvd:cpe\nLink: [CVE-2022-28391](https://nvd.nist.gov/vuln/detail/CVE-2022-28391)",
+                "markdown": "**Vulnerability CVE-2022-28391**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | busybox-mdev-openrc  | 1.35.0-r27  |   | apk  | /lib/apk/db/installed  | nvd:cpe  | [CVE-2022-28391](https://nvd.nist.gov/vuln/detail/CVE-2022-28391)  |\n"
+              },
+              "properties": {
+                "security-severity": "8.8"
+              }
+            },
+            {
+              "id": "CVE-2022-28391-busybox-openrc",
+              "name": "ApkMatcherCpeMatch",
+              "shortDescription": {
+                "text": "CVE-2022-28391 high vulnerability for busybox-openrc package"
+              },
+              "fullDescription": {
+                "text": "BusyBox through 1.35.0 allows remote attackers to execute arbitrary code if netstat is used to print a DNS PTR record's value to a VT compatible terminal. Alternatively, the attacker could choose to change the terminal's colors."
+              },
+              "helpUri": "https://github.com/anchore/grype",
+              "help": {
+                "text": "Vulnerability CVE-2022-28391\nSeverity: high\nPackage: busybox-openrc\nVersion: 1.35.0-r27\nFix Version: \nType: apk\nLocation: /lib/apk/db/installed\nData Namespace: nvd:cpe\nLink: [CVE-2022-28391](https://nvd.nist.gov/vuln/detail/CVE-2022-28391)",
+                "markdown": "**Vulnerability CVE-2022-28391**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | busybox-openrc  | 1.35.0-r27  |   | apk  | /lib/apk/db/installed  | nvd:cpe  | [CVE-2022-28391](https://nvd.nist.gov/vuln/detail/CVE-2022-28391)  |\n"
+              },
+              "properties": {
+                "security-severity": "8.8"
+              }
+            },
+            {
+              "id": "CVE-2022-28391-busybox-suid",
+              "name": "ApkMatcherCpeMatch",
+              "shortDescription": {
+                "text": "CVE-2022-28391 high vulnerability for busybox-suid package"
+              },
+              "fullDescription": {
+                "text": "BusyBox through 1.35.0 allows remote attackers to execute arbitrary code if netstat is used to print a DNS PTR record's value to a VT compatible terminal. Alternatively, the attacker could choose to change the terminal's colors."
+              },
+              "helpUri": "https://github.com/anchore/grype",
+              "help": {
+                "text": "Vulnerability CVE-2022-28391\nSeverity: high\nPackage: busybox-suid\nVersion: 1.35.0-r27\nFix Version: \nType: apk\nLocation: /lib/apk/db/installed\nData Namespace: nvd:cpe\nLink: [CVE-2022-28391](https://nvd.nist.gov/vuln/detail/CVE-2022-28391)",
+                "markdown": "**Vulnerability CVE-2022-28391**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | busybox-suid  | 1.35.0-r27  |   | apk  | /lib/apk/db/installed  | nvd:cpe  | [CVE-2022-28391](https://nvd.nist.gov/vuln/detail/CVE-2022-28391)  |\n"
+              },
+              "properties": {
+                "security-severity": "8.8"
+              }
+            },
+            {
+              "id": "CVE-2022-28391-ssl_client",
+              "name": "ApkMatcherCpeMatch",
+              "shortDescription": {
+                "text": "CVE-2022-28391 high vulnerability for ssl_client package"
+              },
+              "fullDescription": {
+                "text": "BusyBox through 1.35.0 allows remote attackers to execute arbitrary code if netstat is used to print a DNS PTR record's value to a VT compatible terminal. Alternatively, the attacker could choose to change the terminal's colors."
+              },
+              "helpUri": "https://github.com/anchore/grype",
+              "help": {
+                "text": "Vulnerability CVE-2022-28391\nSeverity: high\nPackage: ssl_client\nVersion: 1.35.0-r27\nFix Version: \nType: apk\nLocation: /lib/apk/db/installed\nData Namespace: nvd:cpe\nLink: [CVE-2022-28391](https://nvd.nist.gov/vuln/detail/CVE-2022-28391)",
+                "markdown": "**Vulnerability CVE-2022-28391**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | ssl_client  | 1.35.0-r27  |   | apk  | /lib/apk/db/installed  | nvd:cpe  | [CVE-2022-28391](https://nvd.nist.gov/vuln/detail/CVE-2022-28391)  |\n"
+              },
+              "properties": {
+                "security-severity": "8.8"
+              }
+            },
+            {
+              "id": "CVE-2022-3358-libcrypto3",
+              "name": "ApkMatcherCpeMatch",
+              "shortDescription": {
+                "text": "CVE-2022-3358 high vulnerability for libcrypto3 package"
+              },
+              "fullDescription": {
+                "text": "OpenSSL supports creating a custom cipher via the legacy EVP_CIPHER_meth_new() function and associated function calls. This function was deprecated in OpenSSL 3.0 and application authors are instead encouraged to use the new provider mechanism in order to implement custom ciphers. OpenSSL versions 3.0.0 to 3.0.5 incorrectly handle legacy custom ciphers passed to the EVP_EncryptInit_ex2(), EVP_DecryptInit_ex2() and EVP_CipherInit_ex2() functions (as well as other similarly named encryption and decryption initialisation functions). Instead of using the custom cipher directly it incorrectly tries to fetch an equivalent cipher from the available providers. An equivalent cipher is found based on the NID passed to EVP_CIPHER_meth_new(). This NID is supposed to represent the unique NID for a given cipher. However it is possible for an application to incorrectly pass NID_undef as this value in the call to EVP_CIPHER_meth_new(). When NID_undef is used in this way the OpenSSL encryption/decryption initialisation function will match the NULL cipher as being equivalent and will fetch this from the available providers. This will succeed if the default provider has been loaded (or if a third party provider has been loaded that offers this cipher). Using the NULL cipher means that the plaintext is emitted as the ciphertext. Applications are only affected by this issue if they call EVP_CIPHER_meth_new() using NID_undef and subsequently use it in a call to an encryption/decryption initialisation function. Applications that only use SSL/TLS are not impacted by this issue. Fixed in OpenSSL 3.0.6 (Affected 3.0.0-3.0.5)."
+              },
+              "helpUri": "https://github.com/anchore/grype",
+              "help": {
+                "text": "Vulnerability CVE-2022-3358\nSeverity: high\nPackage: libcrypto3\nVersion: 3.0.5-r3\nFix Version: \nType: apk\nLocation: /lib/apk/db/installed\nData Namespace: nvd:cpe\nLink: [CVE-2022-3358](https://nvd.nist.gov/vuln/detail/CVE-2022-3358)",
+                "markdown": "**Vulnerability CVE-2022-3358**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | libcrypto3  | 3.0.5-r3  |   | apk  | /lib/apk/db/installed  | nvd:cpe  | [CVE-2022-3358](https://nvd.nist.gov/vuln/detail/CVE-2022-3358)  |\n"
+              },
+              "properties": {
+                "security-severity": "7.5"
+              }
+            },
+            {
+              "id": "CVE-2022-3358-libssl3",
+              "name": "ApkMatcherCpeMatch",
+              "shortDescription": {
+                "text": "CVE-2022-3358 high vulnerability for libssl3 package"
+              },
+              "fullDescription": {
+                "text": "OpenSSL supports creating a custom cipher via the legacy EVP_CIPHER_meth_new() function and associated function calls. This function was deprecated in OpenSSL 3.0 and application authors are instead encouraged to use the new provider mechanism in order to implement custom ciphers. OpenSSL versions 3.0.0 to 3.0.5 incorrectly handle legacy custom ciphers passed to the EVP_EncryptInit_ex2(), EVP_DecryptInit_ex2() and EVP_CipherInit_ex2() functions (as well as other similarly named encryption and decryption initialisation functions). Instead of using the custom cipher directly it incorrectly tries to fetch an equivalent cipher from the available providers. An equivalent cipher is found based on the NID passed to EVP_CIPHER_meth_new(). This NID is supposed to represent the unique NID for a given cipher. However it is possible for an application to incorrectly pass NID_undef as this value in the call to EVP_CIPHER_meth_new(). When NID_undef is used in this way the OpenSSL encryption/decryption initialisation function will match the NULL cipher as being equivalent and will fetch this from the available providers. This will succeed if the default provider has been loaded (or if a third party provider has been loaded that offers this cipher). Using the NULL cipher means that the plaintext is emitted as the ciphertext. Applications are only affected by this issue if they call EVP_CIPHER_meth_new() using NID_undef and subsequently use it in a call to an encryption/decryption initialisation function. Applications that only use SSL/TLS are not impacted by this issue. Fixed in OpenSSL 3.0.6 (Affected 3.0.0-3.0.5)."
+              },
+              "helpUri": "https://github.com/anchore/grype",
+              "help": {
+                "text": "Vulnerability CVE-2022-3358\nSeverity: high\nPackage: libssl3\nVersion: 3.0.5-r3\nFix Version: \nType: apk\nLocation: /lib/apk/db/installed\nData Namespace: nvd:cpe\nLink: [CVE-2022-3358](https://nvd.nist.gov/vuln/detail/CVE-2022-3358)",
+                "markdown": "**Vulnerability CVE-2022-3358**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| high  | libssl3  | 3.0.5-r3  |   | apk  | /lib/apk/db/installed  | nvd:cpe  | [CVE-2022-3358](https://nvd.nist.gov/vuln/detail/CVE-2022-3358)  |\n"
+              },
+              "properties": {
+                "security-severity": "7.5"
+              }
+            },
+            {
+              "id": "CVE-2022-36056-github.com/sigstore/cosign",
+              "name": "GoModuleMatcherCpeMatch",
+              "shortDescription": {
+                "text": "CVE-2022-36056 medium vulnerability for github.com/sigstore/cosign package"
+              },
+              "fullDescription": {
+                "text": "Cosign is a project under the sigstore organization which aims to make signatures invisible infrastructure. In versions prior to 1.12.0 a number of vulnerabilities have been found in cosign verify-blob, where Cosign would successfully verify an artifact when verification should have failed. First a cosign bundle can be crafted to successfully verify a blob even if the embedded rekorBundle does not reference the given signature. Second, when providing identity flags, the email and issuer of a certificate is not checked when verifying a Rekor bundle, and the GitHub Actions identity is never checked. Third, providing an invalid Rekor bundle without the experimental flag results in a successful verification. And fourth an invalid transparency log entry will result in immediate success for verification. Details and examples of these issues can be seen in the GHSA-8gw7-4j42-w388 advisory linked. Users are advised to upgrade to 1.12.0. There are no known workarounds for these issues."
+              },
+              "helpUri": "https://github.com/anchore/grype",
+              "help": {
+                "text": "Vulnerability CVE-2022-36056\nSeverity: medium\nPackage: github.com/sigstore/cosign\nVersion: v1.11.0\nFix Version: \nType: go-module\nLocation: /usr/bin/ko\nData Namespace: nvd:cpe\nLink: [CVE-2022-36056](https://nvd.nist.gov/vuln/detail/CVE-2022-36056)",
+                "markdown": "**Vulnerability CVE-2022-36056**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | github.com/sigstore/cosign  | v1.11.0  |   | go-module  | /usr/bin/ko  | nvd:cpe  | [CVE-2022-36056](https://nvd.nist.gov/vuln/detail/CVE-2022-36056)  |\n"
+              },
+              "properties": {
+                "security-severity": "5.5"
+              }
+            },
+            {
+              "id": "GHSA-3633-5h82-39pq-github.com/theupdateframework/go-tuf",
+              "name": "GoModuleMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "GHSA-3633-5h82-39pq low vulnerability for github.com/theupdateframework/go-tuf package"
+              },
+              "fullDescription": {
+                "text": "Improper handling of different key IDs for the same public keys in attacker-controlled metadata"
+              },
+              "helpUri": "https://github.com/anchore/grype",
+              "help": {
+                "text": "Vulnerability GHSA-3633-5h82-39pq\nSeverity: low\nPackage: github.com/theupdateframework/go-tuf\nVersion: v0.3.1\nFix Version: 0.3.2\nType: go-module\nLocation: /usr/bin/ko\nData Namespace: github:language:go\nLink: [GHSA-3633-5h82-39pq](https://github.com/advisories/GHSA-3633-5h82-39pq)",
+                "markdown": "**Vulnerability GHSA-3633-5h82-39pq**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| low  | github.com/theupdateframework/go-tuf  | v0.3.1  | 0.3.2  | go-module  | /usr/bin/ko  | github:language:go  | [GHSA-3633-5h82-39pq](https://github.com/advisories/GHSA-3633-5h82-39pq)  |\n"
+              },
+              "properties": {
+                "security-severity": "1.0"
+              }
+            },
+            {
+              "id": "GHSA-8gw7-4j42-w388-github.com/sigstore/cosign",
+              "name": "GoModuleMatcherExactDirectMatch",
+              "shortDescription": {
+                "text": "GHSA-8gw7-4j42-w388 medium vulnerability for github.com/sigstore/cosign package"
+              },
+              "fullDescription": {
+                "text": "Cosign bundle can be crafted to successfully verify a blob even if the embedded rekorBundle does not reference the given signature"
+              },
+              "helpUri": "https://github.com/anchore/grype",
+              "help": {
+                "text": "Vulnerability GHSA-8gw7-4j42-w388\nSeverity: medium\nPackage: github.com/sigstore/cosign\nVersion: v1.11.0\nFix Version: 1.12.0\nType: go-module\nLocation: /usr/bin/ko\nData Namespace: github:language:go\nLink: [GHSA-8gw7-4j42-w388](https://github.com/advisories/GHSA-8gw7-4j42-w388)",
+                "markdown": "**Vulnerability GHSA-8gw7-4j42-w388**\n| Severity | Package | Version | Fix Version | Type | Location | Data Namespace | Link |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| medium  | github.com/sigstore/cosign  | v1.11.0  | 1.12.0  | go-module  | /usr/bin/ko  | github:language:go  | [GHSA-8gw7-4j42-w388](https://github.com/advisories/GHSA-8gw7-4j42-w388)  |\n"
+              },
+              "properties": {
+                "security-severity": "5.5"
+              }
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "ruleId": "CVE-2015-5237-google.golang.org/protobuf",
+          "message": {
+            "text": "The path /usr/bin/ko reports google.golang.org/protobuf at version v1.28.1  which is a vulnerable (go-module) package installed in the container"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "image//usr/bin/ko"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/usr/bin/ko",
+                  "fullyQualifiedName": "cgr.dev/chainguard/ko:latest@sha256:89caf76a92e44a3fbe1ec35270cdf00aca6e123ef6e170a2418c664049e33745:/usr/bin/ko"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2021-22570-google.golang.org/protobuf",
+          "message": {
+            "text": "The path /usr/bin/ko reports google.golang.org/protobuf at version v1.28.1  which is a vulnerable (go-module) package installed in the container"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "image//usr/bin/ko"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/usr/bin/ko",
+                  "fullyQualifiedName": "cgr.dev/chainguard/ko:latest@sha256:89caf76a92e44a3fbe1ec35270cdf00aca6e123ef6e170a2418c664049e33745:/usr/bin/ko"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-28391-busybox",
+          "message": {
+            "text": "The path /lib/apk/db/installed reports busybox at version 1.35.0-r27  which is a vulnerable (apk) package installed in the container"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "image//lib/apk/db/installed"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/lib/apk/db/installed",
+                  "fullyQualifiedName": "cgr.dev/chainguard/ko:latest@sha256:89caf76a92e44a3fbe1ec35270cdf00aca6e123ef6e170a2418c664049e33745:/lib/apk/db/installed"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-28391-busybox-binsh",
+          "message": {
+            "text": "The path /lib/apk/db/installed reports busybox-binsh at version 1.35.0-r27  which is a vulnerable (apk) package installed in the container"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "image//lib/apk/db/installed"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/lib/apk/db/installed",
+                  "fullyQualifiedName": "cgr.dev/chainguard/ko:latest@sha256:89caf76a92e44a3fbe1ec35270cdf00aca6e123ef6e170a2418c664049e33745:/lib/apk/db/installed"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-28391-busybox-mdev-openrc",
+          "message": {
+            "text": "The path /lib/apk/db/installed reports busybox-mdev-openrc at version 1.35.0-r27  which is a vulnerable (apk) package installed in the container"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "image//lib/apk/db/installed"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/lib/apk/db/installed",
+                  "fullyQualifiedName": "cgr.dev/chainguard/ko:latest@sha256:89caf76a92e44a3fbe1ec35270cdf00aca6e123ef6e170a2418c664049e33745:/lib/apk/db/installed"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-28391-busybox-openrc",
+          "message": {
+            "text": "The path /lib/apk/db/installed reports busybox-openrc at version 1.35.0-r27  which is a vulnerable (apk) package installed in the container"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "image//lib/apk/db/installed"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/lib/apk/db/installed",
+                  "fullyQualifiedName": "cgr.dev/chainguard/ko:latest@sha256:89caf76a92e44a3fbe1ec35270cdf00aca6e123ef6e170a2418c664049e33745:/lib/apk/db/installed"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-28391-busybox-suid",
+          "message": {
+            "text": "The path /lib/apk/db/installed reports busybox-suid at version 1.35.0-r27  which is a vulnerable (apk) package installed in the container"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "image//lib/apk/db/installed"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/lib/apk/db/installed",
+                  "fullyQualifiedName": "cgr.dev/chainguard/ko:latest@sha256:89caf76a92e44a3fbe1ec35270cdf00aca6e123ef6e170a2418c664049e33745:/lib/apk/db/installed"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-28391-ssl_client",
+          "message": {
+            "text": "The path /lib/apk/db/installed reports ssl_client at version 1.35.0-r27  which is a vulnerable (apk) package installed in the container"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "image//lib/apk/db/installed"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/lib/apk/db/installed",
+                  "fullyQualifiedName": "cgr.dev/chainguard/ko:latest@sha256:89caf76a92e44a3fbe1ec35270cdf00aca6e123ef6e170a2418c664049e33745:/lib/apk/db/installed"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-3358-libcrypto3",
+          "message": {
+            "text": "The path /lib/apk/db/installed reports libcrypto3 at version 3.0.5-r3  which is a vulnerable (apk) package installed in the container"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "image//lib/apk/db/installed"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/lib/apk/db/installed",
+                  "fullyQualifiedName": "cgr.dev/chainguard/ko:latest@sha256:89caf76a92e44a3fbe1ec35270cdf00aca6e123ef6e170a2418c664049e33745:/lib/apk/db/installed"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-3358-libssl3",
+          "message": {
+            "text": "The path /lib/apk/db/installed reports libssl3 at version 3.0.5-r3  which is a vulnerable (apk) package installed in the container"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "image//lib/apk/db/installed"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/lib/apk/db/installed",
+                  "fullyQualifiedName": "cgr.dev/chainguard/ko:latest@sha256:89caf76a92e44a3fbe1ec35270cdf00aca6e123ef6e170a2418c664049e33745:/lib/apk/db/installed"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-36056-github.com/sigstore/cosign",
+          "message": {
+            "text": "The path /usr/bin/ko reports github.com/sigstore/cosign at version v1.11.0  which is a vulnerable (go-module) package installed in the container"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "image//usr/bin/ko"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/usr/bin/ko",
+                  "fullyQualifiedName": "cgr.dev/chainguard/ko:latest@sha256:89caf76a92e44a3fbe1ec35270cdf00aca6e123ef6e170a2418c664049e33745:/usr/bin/ko"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "GHSA-3633-5h82-39pq-github.com/theupdateframework/go-tuf",
+          "message": {
+            "text": "The path /usr/bin/ko reports github.com/theupdateframework/go-tuf at version v0.3.1  which is a vulnerable (go-module) package installed in the container"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "image//usr/bin/ko"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/usr/bin/ko",
+                  "fullyQualifiedName": "cgr.dev/chainguard/ko:latest@sha256:89caf76a92e44a3fbe1ec35270cdf00aca6e123ef6e170a2418c664049e33745:/usr/bin/ko"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "GHSA-8gw7-4j42-w388-github.com/sigstore/cosign",
+          "message": {
+            "text": "The path /usr/bin/ko reports github.com/sigstore/cosign at version v1.11.0  which is a vulnerable (go-module) package installed in the container"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "image//usr/bin/ko"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "name": "/usr/bin/ko",
+                  "fullyQualifiedName": "cgr.dev/chainguard/ko:latest@sha256:89caf76a92e44a3fbe1ec35270cdf00aca6e123ef6e170a2418c664049e33745:/usr/bin/ko"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

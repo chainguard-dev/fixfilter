@@ -1,0 +1,1220 @@
+{
+ "matches": [
+  {
+   "vulnerability": {
+    "id": "CVE-2015-5237",
+    "dataSource": "https://nvd.nist.gov/vuln/detail/CVE-2015-5237",
+    "namespace": "nvd:cpe",
+    "severity": "High",
+    "urls": [
+     "https://github.com/google/protobuf/issues/760",
+     "https://bugzilla.redhat.com/show_bug.cgi?id=1256426",
+     "http://www.openwall.com/lists/oss-security/2015/08/27/2",
+     "https://lists.apache.org/thread.html/b0656d359c7d40ec9f39c8cc61bca66802ef9a2a12ee199f5b0c1442@%3Cdev.drill.apache.org%3E",
+     "https://lists.apache.org/thread.html/519eb0fd45642dcecd9ff74cb3e71c20a4753f7d82e2f07864b5108f@%3Cdev.drill.apache.org%3E",
+     "https://lists.apache.org/thread.html/ra28fed69eef3a71e5fe5daea001d0456b05b102044237330ec5c7c82@%3Ccommits.pulsar.apache.org%3E",
+     "https://lists.apache.org/thread.html/f9bc3e55f4e28d1dcd1a69aae6d53e609a758e34d2869b4d798e13cc@%3Cissues.drill.apache.org%3E",
+     "https://lists.apache.org/thread.html/r17dc6f394429f6bffb5e4c66555d93c2e9923cbbdc5a93db9a56c1c7@%3Ccommits.pulsar.apache.org%3E",
+     "https://lists.apache.org/thread.html/r42e47994734cd1980ef3e204a40555336e10cc80096927aca2f37d90@%3Ccommits.pulsar.apache.org%3E",
+     "https://lists.apache.org/thread.html/re6d04a214424a97ea59c62190d79316edf311a0a6346524dfef3b940@%3Ccommits.pulsar.apache.org%3E",
+     "https://lists.apache.org/thread.html/r1263fa5b51e4ec3cb8f09ff40e4747428c71198e9bee93349ec96a3c@%3Ccommits.pulsar.apache.org%3E",
+     "https://lists.apache.org/thread.html/r42ef6acfb0d86a2df0c2390702ecbe97d2104a331560f2790d17ca69@%3Ccommits.pulsar.apache.org%3E",
+     "https://lists.apache.org/thread.html/rb71dac1d9dd4e8a8ae3dbc033aeae514eda9be1263c1df3b42a530a2@%3Ccommits.pulsar.apache.org%3E",
+     "https://lists.apache.org/thread.html/r320dc858da88846ba00bb077bcca2cdf75b7dde0f6eb3a3d60dba6a1@%3Ccommits.pulsar.apache.org%3E",
+     "https://lists.apache.org/thread.html/r85c9a764b573c786224688cc906c27e28343e18f5b33387f94cae90f@%3Ccommits.pulsar.apache.org%3E",
+     "https://lists.apache.org/thread.html/r02e39d7beb32eebcdbb4b516e95f67d71c90d5d462b26f4078d21eeb@%3Cuser.flink.apache.org%3E",
+     "https://lists.apache.org/thread.html/r02e39d7beb32eebcdbb4b516e95f67d71c90d5d462b26f4078d21eeb@%3Cdev.flink.apache.org%3E",
+     "https://lists.apache.org/thread.html/r5e52caf41dc49df55b4ee80758356fe1ff2a88179ff24c685de7c28d@%3Ccommits.pulsar.apache.org%3E",
+     "https://lists.apache.org/thread.html/rf7539287c90be979bac94af9aaba34118fbf968864944b4871af48dd@%3Ccommits.pulsar.apache.org%3E",
+     "https://lists.apache.org/thread.html/r1d274d647b3c2060df9be21eade4ce56d3a59998cf19ac72662dd994@%3Ccommits.pulsar.apache.org%3E",
+     "https://lists.apache.org/thread.html/r4886108206d4c535db9b20c813fe4723d4fe6a91b9278382af8b9d08@%3Cissues.spark.apache.org%3E",
+     "https://lists.apache.org/thread.html/rb40dc9d63a5331bce8e80865b7fa3af9dd31e16555affd697b6f3526@%3Cissues.spark.apache.org%3E",
+     "https://lists.apache.org/thread.html/r5741f4dbdd129dbb9885f5fb170dc1b24a06b9313bedef5e67fded94@%3Cissues.spark.apache.org%3E",
+     "https://lists.apache.org/thread.html/r14fa8d38d5757254f1a2e112270c996711d514de2e3b01c93d397ab4@%3Cissues.spark.apache.org%3E",
+     "https://lists.apache.org/thread.html/r2ea33ce5591a9cb9ed52750b6ab42ab658f529a7028c3166ba93c7d5@%3Ccommon-issues.hadoop.apache.org%3E",
+     "https://lists.apache.org/thread.html/r00d9ab1fc0f1daf14cd4386564dd84f7889404438d81462c86dfa836@%3Ccommon-dev.hadoop.apache.org%3E",
+     "https://lists.apache.org/thread.html/r764fc66435ee4d185d359c28c0887d3e5866d7292a8d5598d9e7cbc4@%3Ccommon-issues.hadoop.apache.org%3E",
+     "https://lists.apache.org/thread.html/r0ca83171c4898dc92b86fa6f484a7be1dc96206765f4d01dce0f1b28@%3Ccommon-issues.hadoop.apache.org%3E",
+     "https://lists.apache.org/thread.html/r00097d0b5b6164ea428554007121d5dc1f88ba2af7b9e977a10572cd@%3Cdev.hbase.apache.org%3E",
+     "https://lists.apache.org/thread.html/rd64381fb8f92d640c1975dc50dcdf1b8512e02a2a7b20292d3565cae@%3Cissues.hbase.apache.org%3E",
+     "https://lists.apache.org/thread.html/r4ef574a5621b0e670a3ce641e9922543e34f22bf4c9ee9584aa67fcf@%3Cissues.hbase.apache.org%3E",
+     "https://lists.apache.org/thread.html/r7fed8dd9bee494094e7011cf3c2ab75bd8754ea314c6734688c42932@%3Ccommon-issues.hadoop.apache.org%3E"
+    ],
+    "description": "protobuf allows remote authenticated attackers to cause a heap-based buffer overflow.",
+    "cvss": [
+     {
+      "version": "2.0",
+      "vector": "AV:N/AC:L/Au:S/C:P/I:P/A:P",
+      "metrics": {
+       "baseScore": 6.5,
+       "exploitabilityScore": 8,
+       "impactScore": 6.4
+      },
+      "vendorMetadata": {}
+     },
+     {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "metrics": {
+       "baseScore": 8.8,
+       "exploitabilityScore": 2.8,
+       "impactScore": 5.9
+      },
+      "vendorMetadata": {}
+     }
+    ],
+    "fix": {
+     "versions": [],
+     "state": "unknown"
+    },
+    "advisories": []
+   },
+   "relatedVulnerabilities": [],
+   "matchDetails": [
+    {
+     "type": "cpe-match",
+     "matcher": "go-module-matcher",
+     "searchedBy": {
+      "namespace": "nvd:cpe",
+      "cpes": [
+       "cpe:2.3:a:google:protobuf:v1.28.1:*:*:*:*:*:*:*"
+      ]
+     },
+     "found": {
+      "versionConstraint": "<= 3.1.0 (unknown)",
+      "cpes": [
+       "cpe:2.3:a:google:protobuf:*:*:*:*:*:*:*:*"
+      ]
+     }
+    }
+   ],
+   "artifact": {
+    "name": "google.golang.org/protobuf",
+    "version": "v1.28.1",
+    "type": "go-module",
+    "locations": [
+     {
+      "path": "/usr/bin/ko",
+      "layerID": "sha256:8793f808fe684624cec59b1332ddf92215b8b282295998e7285f2495552501a4"
+     }
+    ],
+    "language": "go",
+    "licenses": [],
+    "cpes": [
+     "cpe:2.3:a:google:protobuf:v1.28.1:*:*:*:*:*:*:*"
+    ],
+    "purl": "pkg:golang/google.golang.org/protobuf@v1.28.1",
+    "upstreams": [],
+    "metadataType": "GolangBinMetadata",
+    "metadata": {
+     "goCompiledVersion": "go1.19.2",
+     "architecture": "amd64",
+     "mainModule": "github.com/google/ko"
+    }
+   }
+  },
+  {
+   "vulnerability": {
+    "id": "CVE-2021-22570",
+    "dataSource": "https://nvd.nist.gov/vuln/detail/CVE-2021-22570",
+    "namespace": "nvd:cpe",
+    "severity": "Medium",
+    "urls": [
+     "https://github.com/protocolbuffers/protobuf/releases/tag/v3.15.0",
+     "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/IFX6KPNOFHYD6L4XES5PCM3QNSKZBOTQ/",
+     "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/3DVUZPALAQ34TQP6KFNLM4IZS6B32XSA/",
+     "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/BTRGBRC5KGCA4SK5MUNLPYJRAGXMBIYY/",
+     "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/NVTWVQRB5OCCTMKEQFY5MYED3DXDVSLP/",
+     "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/5PAGL5M2KGYPN3VEQCRJJE6NA7D5YG5X/",
+     "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/KQJB6ZPRLKV6WCMX2PRRRQBFAOXFBK6B/",
+     "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/MRWRAXAFR3JR7XCFWTHC2KALSZKWACCE/",
+     "https://www.oracle.com/security-alerts/cpuapr2022.html",
+     "https://security.netapp.com/advisory/ntap-20220429-0005/"
+    ],
+    "description": "Nullptr dereference when a null char is present in a proto symbol. The symbol is parsed incorrectly, leading to an unchecked call into the proto file's name during generation of the resulting error message. Since the symbol is incorrectly parsed, the file is nullptr. We recommend upgrading to version 3.15.0 or greater.",
+    "cvss": [
+     {
+      "version": "2.0",
+      "vector": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+      "metrics": {
+       "baseScore": 2.1,
+       "exploitabilityScore": 3.9,
+       "impactScore": 2.9
+      },
+      "vendorMetadata": {}
+     },
+     {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+      "metrics": {
+       "baseScore": 5.5,
+       "exploitabilityScore": 1.8,
+       "impactScore": 3.6
+      },
+      "vendorMetadata": {}
+     }
+    ],
+    "fix": {
+     "versions": [],
+     "state": "unknown"
+    },
+    "advisories": []
+   },
+   "relatedVulnerabilities": [],
+   "matchDetails": [
+    {
+     "type": "cpe-match",
+     "matcher": "go-module-matcher",
+     "searchedBy": {
+      "namespace": "nvd:cpe",
+      "cpes": [
+       "cpe:2.3:a:google:protobuf:v1.28.1:*:*:*:*:*:*:*"
+      ]
+     },
+     "found": {
+      "versionConstraint": "< 3.15.0 (unknown)",
+      "cpes": [
+       "cpe:2.3:a:google:protobuf:*:*:*:*:*:*:*:*"
+      ]
+     }
+    }
+   ],
+   "artifact": {
+    "name": "google.golang.org/protobuf",
+    "version": "v1.28.1",
+    "type": "go-module",
+    "locations": [
+     {
+      "path": "/usr/bin/ko",
+      "layerID": "sha256:8793f808fe684624cec59b1332ddf92215b8b282295998e7285f2495552501a4"
+     }
+    ],
+    "language": "go",
+    "licenses": [],
+    "cpes": [
+     "cpe:2.3:a:google:protobuf:v1.28.1:*:*:*:*:*:*:*"
+    ],
+    "purl": "pkg:golang/google.golang.org/protobuf@v1.28.1",
+    "upstreams": [],
+    "metadataType": "GolangBinMetadata",
+    "metadata": {
+     "goCompiledVersion": "go1.19.2",
+     "architecture": "amd64",
+     "mainModule": "github.com/google/ko"
+    }
+   }
+  },
+  {
+   "vulnerability": {
+    "id": "CVE-2022-28391",
+    "dataSource": "https://nvd.nist.gov/vuln/detail/CVE-2022-28391",
+    "namespace": "nvd:cpe",
+    "severity": "High",
+    "urls": [
+     "https://git.alpinelinux.org/aports/plain/main/busybox/0002-nslookup-sanitize-all-printed-strings-with-printable.patch",
+     "https://gitlab.alpinelinux.org/alpine/aports/-/issues/13661",
+     "https://git.alpinelinux.org/aports/plain/main/busybox/0001-libbb-sockaddr2str-ensure-only-printable-characters-.patch"
+    ],
+    "description": "BusyBox through 1.35.0 allows remote attackers to execute arbitrary code if netstat is used to print a DNS PTR record's value to a VT compatible terminal. Alternatively, the attacker could choose to change the terminal's colors.",
+    "cvss": [
+     {
+      "version": "2.0",
+      "vector": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+      "metrics": {
+       "baseScore": 6.8,
+       "exploitabilityScore": 8.6,
+       "impactScore": 6.4
+      },
+      "vendorMetadata": {}
+     },
+     {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "metrics": {
+       "baseScore": 8.8,
+       "exploitabilityScore": 2.8,
+       "impactScore": 5.9
+      },
+      "vendorMetadata": {}
+     }
+    ],
+    "fix": {
+     "versions": [],
+     "state": "unknown"
+    },
+    "advisories": []
+   },
+   "relatedVulnerabilities": [],
+   "matchDetails": [
+    {
+     "type": "cpe-match",
+     "matcher": "apk-matcher",
+     "searchedBy": {
+      "namespace": "nvd:cpe",
+      "cpes": [
+       "cpe:2.3:a:busybox:busybox:1.35.0-r27:*:*:*:*:*:*:*"
+      ]
+     },
+     "found": {
+      "versionConstraint": "<= 1.35.0 (unknown)",
+      "cpes": [
+       "cpe:2.3:a:busybox:busybox:*:*:*:*:*:*:*:*"
+      ]
+     }
+    }
+   ],
+   "artifact": {
+    "name": "busybox",
+    "version": "1.35.0-r27",
+    "type": "apk",
+    "locations": [
+     {
+      "path": "/lib/apk/db/installed",
+      "layerID": "sha256:8793f808fe684624cec59b1332ddf92215b8b282295998e7285f2495552501a4"
+     }
+    ],
+    "language": "",
+    "licenses": [
+     "GPL-2.0-only"
+    ],
+    "cpes": [
+     "cpe:2.3:a:busybox:busybox:1.35.0-r27:*:*:*:*:*:*:*"
+    ],
+    "purl": "pkg:alpine/busybox@1.35.0-r27?arch=x86_64&upstream=busybox&distro=alpine-3.17_alpha20220809",
+    "upstreams": [
+     {
+      "name": "busybox"
+     }
+    ]
+   }
+  },
+  {
+   "vulnerability": {
+    "id": "CVE-2022-28391",
+    "dataSource": "https://nvd.nist.gov/vuln/detail/CVE-2022-28391",
+    "namespace": "nvd:cpe",
+    "severity": "High",
+    "urls": [
+     "https://git.alpinelinux.org/aports/plain/main/busybox/0002-nslookup-sanitize-all-printed-strings-with-printable.patch",
+     "https://gitlab.alpinelinux.org/alpine/aports/-/issues/13661",
+     "https://git.alpinelinux.org/aports/plain/main/busybox/0001-libbb-sockaddr2str-ensure-only-printable-characters-.patch"
+    ],
+    "description": "BusyBox through 1.35.0 allows remote attackers to execute arbitrary code if netstat is used to print a DNS PTR record's value to a VT compatible terminal. Alternatively, the attacker could choose to change the terminal's colors.",
+    "cvss": [
+     {
+      "version": "2.0",
+      "vector": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+      "metrics": {
+       "baseScore": 6.8,
+       "exploitabilityScore": 8.6,
+       "impactScore": 6.4
+      },
+      "vendorMetadata": {}
+     },
+     {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "metrics": {
+       "baseScore": 8.8,
+       "exploitabilityScore": 2.8,
+       "impactScore": 5.9
+      },
+      "vendorMetadata": {}
+     }
+    ],
+    "fix": {
+     "versions": [],
+     "state": "unknown"
+    },
+    "advisories": []
+   },
+   "relatedVulnerabilities": [],
+   "matchDetails": [
+    {
+     "type": "cpe-match",
+     "matcher": "apk-matcher",
+     "searchedBy": {
+      "namespace": "nvd:cpe",
+      "cpes": [
+       "cpe:2.3:a:busybox:busybox:1.35.0-r27:*:*:*:*:*:*:*"
+      ]
+     },
+     "found": {
+      "versionConstraint": "<= 1.35.0 (unknown)",
+      "cpes": [
+       "cpe:2.3:a:busybox:busybox:*:*:*:*:*:*:*:*"
+      ]
+     }
+    }
+   ],
+   "artifact": {
+    "name": "busybox-binsh",
+    "version": "1.35.0-r27",
+    "type": "apk",
+    "locations": [
+     {
+      "path": "/lib/apk/db/installed",
+      "layerID": "sha256:8793f808fe684624cec59b1332ddf92215b8b282295998e7285f2495552501a4"
+     }
+    ],
+    "language": "",
+    "licenses": [
+     "GPL-2.0-only"
+    ],
+    "cpes": [
+     "cpe:2.3:a:busybox-binsh:busybox-binsh:1.35.0-r27:*:*:*:*:*:*:*",
+     "cpe:2.3:a:busybox-binsh:busybox_binsh:1.35.0-r27:*:*:*:*:*:*:*",
+     "cpe:2.3:a:busybox_binsh:busybox-binsh:1.35.0-r27:*:*:*:*:*:*:*",
+     "cpe:2.3:a:busybox_binsh:busybox_binsh:1.35.0-r27:*:*:*:*:*:*:*",
+     "cpe:2.3:a:busybox:busybox-binsh:1.35.0-r27:*:*:*:*:*:*:*",
+     "cpe:2.3:a:busybox:busybox_binsh:1.35.0-r27:*:*:*:*:*:*:*"
+    ],
+    "purl": "pkg:alpine/busybox-binsh@1.35.0-r27?arch=x86_64&upstream=busybox&distro=alpine-3.17_alpha20220809",
+    "upstreams": [
+     {
+      "name": "busybox"
+     }
+    ]
+   }
+  },
+  {
+   "vulnerability": {
+    "id": "CVE-2022-28391",
+    "dataSource": "https://nvd.nist.gov/vuln/detail/CVE-2022-28391",
+    "namespace": "nvd:cpe",
+    "severity": "High",
+    "urls": [
+     "https://git.alpinelinux.org/aports/plain/main/busybox/0002-nslookup-sanitize-all-printed-strings-with-printable.patch",
+     "https://gitlab.alpinelinux.org/alpine/aports/-/issues/13661",
+     "https://git.alpinelinux.org/aports/plain/main/busybox/0001-libbb-sockaddr2str-ensure-only-printable-characters-.patch"
+    ],
+    "description": "BusyBox through 1.35.0 allows remote attackers to execute arbitrary code if netstat is used to print a DNS PTR record's value to a VT compatible terminal. Alternatively, the attacker could choose to change the terminal's colors.",
+    "cvss": [
+     {
+      "version": "2.0",
+      "vector": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+      "metrics": {
+       "baseScore": 6.8,
+       "exploitabilityScore": 8.6,
+       "impactScore": 6.4
+      },
+      "vendorMetadata": {}
+     },
+     {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "metrics": {
+       "baseScore": 8.8,
+       "exploitabilityScore": 2.8,
+       "impactScore": 5.9
+      },
+      "vendorMetadata": {}
+     }
+    ],
+    "fix": {
+     "versions": [],
+     "state": "unknown"
+    },
+    "advisories": []
+   },
+   "relatedVulnerabilities": [],
+   "matchDetails": [
+    {
+     "type": "cpe-match",
+     "matcher": "apk-matcher",
+     "searchedBy": {
+      "namespace": "nvd:cpe",
+      "cpes": [
+       "cpe:2.3:a:busybox:busybox:1.35.0-r27:*:*:*:*:*:*:*"
+      ]
+     },
+     "found": {
+      "versionConstraint": "<= 1.35.0 (unknown)",
+      "cpes": [
+       "cpe:2.3:a:busybox:busybox:*:*:*:*:*:*:*:*"
+      ]
+     }
+    }
+   ],
+   "artifact": {
+    "name": "busybox-mdev-openrc",
+    "version": "1.35.0-r27",
+    "type": "apk",
+    "locations": [
+     {
+      "path": "/lib/apk/db/installed",
+      "layerID": "sha256:8793f808fe684624cec59b1332ddf92215b8b282295998e7285f2495552501a4"
+     }
+    ],
+    "language": "",
+    "licenses": [
+     "GPL-2.0-only"
+    ],
+    "cpes": [
+     "cpe:2.3:a:busybox-mdev-openrc:busybox-mdev-openrc:1.35.0-r27:*:*:*:*:*:*:*",
+     "cpe:2.3:a:busybox-mdev-openrc:busybox_mdev_openrc:1.35.0-r27:*:*:*:*:*:*:*",
+     "cpe:2.3:a:busybox_mdev_openrc:busybox-mdev-openrc:1.35.0-r27:*:*:*:*:*:*:*",
+     "cpe:2.3:a:busybox_mdev_openrc:busybox_mdev_openrc:1.35.0-r27:*:*:*:*:*:*:*",
+     "cpe:2.3:a:busybox-mdev:busybox-mdev-openrc:1.35.0-r27:*:*:*:*:*:*:*",
+     "cpe:2.3:a:busybox-mdev:busybox_mdev_openrc:1.35.0-r27:*:*:*:*:*:*:*",
+     "cpe:2.3:a:busybox_mdev:busybox-mdev-openrc:1.35.0-r27:*:*:*:*:*:*:*",
+     "cpe:2.3:a:busybox_mdev:busybox_mdev_openrc:1.35.0-r27:*:*:*:*:*:*:*",
+     "cpe:2.3:a:busybox:busybox-mdev-openrc:1.35.0-r27:*:*:*:*:*:*:*",
+     "cpe:2.3:a:busybox:busybox_mdev_openrc:1.35.0-r27:*:*:*:*:*:*:*"
+    ],
+    "purl": "pkg:alpine/busybox-mdev-openrc@1.35.0-r27?arch=x86_64&upstream=busybox&distro=alpine-3.17_alpha20220809",
+    "upstreams": [
+     {
+      "name": "busybox"
+     }
+    ]
+   }
+  },
+  {
+   "vulnerability": {
+    "id": "CVE-2022-28391",
+    "dataSource": "https://nvd.nist.gov/vuln/detail/CVE-2022-28391",
+    "namespace": "nvd:cpe",
+    "severity": "High",
+    "urls": [
+     "https://git.alpinelinux.org/aports/plain/main/busybox/0002-nslookup-sanitize-all-printed-strings-with-printable.patch",
+     "https://gitlab.alpinelinux.org/alpine/aports/-/issues/13661",
+     "https://git.alpinelinux.org/aports/plain/main/busybox/0001-libbb-sockaddr2str-ensure-only-printable-characters-.patch"
+    ],
+    "description": "BusyBox through 1.35.0 allows remote attackers to execute arbitrary code if netstat is used to print a DNS PTR record's value to a VT compatible terminal. Alternatively, the attacker could choose to change the terminal's colors.",
+    "cvss": [
+     {
+      "version": "2.0",
+      "vector": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+      "metrics": {
+       "baseScore": 6.8,
+       "exploitabilityScore": 8.6,
+       "impactScore": 6.4
+      },
+      "vendorMetadata": {}
+     },
+     {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "metrics": {
+       "baseScore": 8.8,
+       "exploitabilityScore": 2.8,
+       "impactScore": 5.9
+      },
+      "vendorMetadata": {}
+     }
+    ],
+    "fix": {
+     "versions": [],
+     "state": "unknown"
+    },
+    "advisories": []
+   },
+   "relatedVulnerabilities": [],
+   "matchDetails": [
+    {
+     "type": "cpe-match",
+     "matcher": "apk-matcher",
+     "searchedBy": {
+      "namespace": "nvd:cpe",
+      "cpes": [
+       "cpe:2.3:a:busybox:busybox:1.35.0-r27:*:*:*:*:*:*:*"
+      ]
+     },
+     "found": {
+      "versionConstraint": "<= 1.35.0 (unknown)",
+      "cpes": [
+       "cpe:2.3:a:busybox:busybox:*:*:*:*:*:*:*:*"
+      ]
+     }
+    }
+   ],
+   "artifact": {
+    "name": "busybox-openrc",
+    "version": "1.35.0-r27",
+    "type": "apk",
+    "locations": [
+     {
+      "path": "/lib/apk/db/installed",
+      "layerID": "sha256:8793f808fe684624cec59b1332ddf92215b8b282295998e7285f2495552501a4"
+     }
+    ],
+    "language": "",
+    "licenses": [
+     "GPL-2.0-only"
+    ],
+    "cpes": [
+     "cpe:2.3:a:busybox-openrc:busybox-openrc:1.35.0-r27:*:*:*:*:*:*:*",
+     "cpe:2.3:a:busybox-openrc:busybox_openrc:1.35.0-r27:*:*:*:*:*:*:*",
+     "cpe:2.3:a:busybox_openrc:busybox-openrc:1.35.0-r27:*:*:*:*:*:*:*",
+     "cpe:2.3:a:busybox_openrc:busybox_openrc:1.35.0-r27:*:*:*:*:*:*:*",
+     "cpe:2.3:a:busybox:busybox-openrc:1.35.0-r27:*:*:*:*:*:*:*",
+     "cpe:2.3:a:busybox:busybox_openrc:1.35.0-r27:*:*:*:*:*:*:*"
+    ],
+    "purl": "pkg:alpine/busybox-openrc@1.35.0-r27?arch=x86_64&upstream=busybox&distro=alpine-3.17_alpha20220809",
+    "upstreams": [
+     {
+      "name": "busybox"
+     }
+    ]
+   }
+  },
+  {
+   "vulnerability": {
+    "id": "CVE-2022-28391",
+    "dataSource": "https://nvd.nist.gov/vuln/detail/CVE-2022-28391",
+    "namespace": "nvd:cpe",
+    "severity": "High",
+    "urls": [
+     "https://git.alpinelinux.org/aports/plain/main/busybox/0002-nslookup-sanitize-all-printed-strings-with-printable.patch",
+     "https://gitlab.alpinelinux.org/alpine/aports/-/issues/13661",
+     "https://git.alpinelinux.org/aports/plain/main/busybox/0001-libbb-sockaddr2str-ensure-only-printable-characters-.patch"
+    ],
+    "description": "BusyBox through 1.35.0 allows remote attackers to execute arbitrary code if netstat is used to print a DNS PTR record's value to a VT compatible terminal. Alternatively, the attacker could choose to change the terminal's colors.",
+    "cvss": [
+     {
+      "version": "2.0",
+      "vector": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+      "metrics": {
+       "baseScore": 6.8,
+       "exploitabilityScore": 8.6,
+       "impactScore": 6.4
+      },
+      "vendorMetadata": {}
+     },
+     {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "metrics": {
+       "baseScore": 8.8,
+       "exploitabilityScore": 2.8,
+       "impactScore": 5.9
+      },
+      "vendorMetadata": {}
+     }
+    ],
+    "fix": {
+     "versions": [],
+     "state": "unknown"
+    },
+    "advisories": []
+   },
+   "relatedVulnerabilities": [],
+   "matchDetails": [
+    {
+     "type": "cpe-match",
+     "matcher": "apk-matcher",
+     "searchedBy": {
+      "namespace": "nvd:cpe",
+      "cpes": [
+       "cpe:2.3:a:busybox:busybox:1.35.0-r27:*:*:*:*:*:*:*"
+      ]
+     },
+     "found": {
+      "versionConstraint": "<= 1.35.0 (unknown)",
+      "cpes": [
+       "cpe:2.3:a:busybox:busybox:*:*:*:*:*:*:*:*"
+      ]
+     }
+    }
+   ],
+   "artifact": {
+    "name": "busybox-suid",
+    "version": "1.35.0-r27",
+    "type": "apk",
+    "locations": [
+     {
+      "path": "/lib/apk/db/installed",
+      "layerID": "sha256:8793f808fe684624cec59b1332ddf92215b8b282295998e7285f2495552501a4"
+     }
+    ],
+    "language": "",
+    "licenses": [
+     "GPL-2.0-only"
+    ],
+    "cpes": [
+     "cpe:2.3:a:busybox-suid:busybox-suid:1.35.0-r27:*:*:*:*:*:*:*",
+     "cpe:2.3:a:busybox-suid:busybox_suid:1.35.0-r27:*:*:*:*:*:*:*",
+     "cpe:2.3:a:busybox_suid:busybox-suid:1.35.0-r27:*:*:*:*:*:*:*",
+     "cpe:2.3:a:busybox_suid:busybox_suid:1.35.0-r27:*:*:*:*:*:*:*",
+     "cpe:2.3:a:busybox:busybox-suid:1.35.0-r27:*:*:*:*:*:*:*",
+     "cpe:2.3:a:busybox:busybox_suid:1.35.0-r27:*:*:*:*:*:*:*"
+    ],
+    "purl": "pkg:alpine/busybox-suid@1.35.0-r27?arch=x86_64&upstream=busybox&distro=alpine-3.17_alpha20220809",
+    "upstreams": [
+     {
+      "name": "busybox"
+     }
+    ]
+   }
+  },
+  {
+   "vulnerability": {
+    "id": "CVE-2022-28391",
+    "dataSource": "https://nvd.nist.gov/vuln/detail/CVE-2022-28391",
+    "namespace": "nvd:cpe",
+    "severity": "High",
+    "urls": [
+     "https://git.alpinelinux.org/aports/plain/main/busybox/0002-nslookup-sanitize-all-printed-strings-with-printable.patch",
+     "https://gitlab.alpinelinux.org/alpine/aports/-/issues/13661",
+     "https://git.alpinelinux.org/aports/plain/main/busybox/0001-libbb-sockaddr2str-ensure-only-printable-characters-.patch"
+    ],
+    "description": "BusyBox through 1.35.0 allows remote attackers to execute arbitrary code if netstat is used to print a DNS PTR record's value to a VT compatible terminal. Alternatively, the attacker could choose to change the terminal's colors.",
+    "cvss": [
+     {
+      "version": "2.0",
+      "vector": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+      "metrics": {
+       "baseScore": 6.8,
+       "exploitabilityScore": 8.6,
+       "impactScore": 6.4
+      },
+      "vendorMetadata": {}
+     },
+     {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "metrics": {
+       "baseScore": 8.8,
+       "exploitabilityScore": 2.8,
+       "impactScore": 5.9
+      },
+      "vendorMetadata": {}
+     }
+    ],
+    "fix": {
+     "versions": [],
+     "state": "unknown"
+    },
+    "advisories": []
+   },
+   "relatedVulnerabilities": [],
+   "matchDetails": [
+    {
+     "type": "cpe-match",
+     "matcher": "apk-matcher",
+     "searchedBy": {
+      "namespace": "nvd:cpe",
+      "cpes": [
+       "cpe:2.3:a:busybox:busybox:1.35.0-r27:*:*:*:*:*:*:*"
+      ]
+     },
+     "found": {
+      "versionConstraint": "<= 1.35.0 (unknown)",
+      "cpes": [
+       "cpe:2.3:a:busybox:busybox:*:*:*:*:*:*:*:*"
+      ]
+     }
+    }
+   ],
+   "artifact": {
+    "name": "ssl_client",
+    "version": "1.35.0-r27",
+    "type": "apk",
+    "locations": [
+     {
+      "path": "/lib/apk/db/installed",
+      "layerID": "sha256:8793f808fe684624cec59b1332ddf92215b8b282295998e7285f2495552501a4"
+     }
+    ],
+    "language": "",
+    "licenses": [
+     "GPL-2.0-only"
+    ],
+    "cpes": [
+     "cpe:2.3:a:ssl-client:ssl-client:1.35.0-r27:*:*:*:*:*:*:*",
+     "cpe:2.3:a:ssl-client:ssl_client:1.35.0-r27:*:*:*:*:*:*:*",
+     "cpe:2.3:a:ssl_client:ssl-client:1.35.0-r27:*:*:*:*:*:*:*",
+     "cpe:2.3:a:ssl_client:ssl_client:1.35.0-r27:*:*:*:*:*:*:*",
+     "cpe:2.3:a:ssl:ssl-client:1.35.0-r27:*:*:*:*:*:*:*",
+     "cpe:2.3:a:ssl:ssl_client:1.35.0-r27:*:*:*:*:*:*:*"
+    ],
+    "purl": "pkg:alpine/ssl_client@1.35.0-r27?arch=x86_64&upstream=busybox&distro=alpine-3.17_alpha20220809",
+    "upstreams": [
+     {
+      "name": "busybox"
+     }
+    ]
+   }
+  },
+  {
+   "vulnerability": {
+    "id": "CVE-2022-3358",
+    "dataSource": "https://nvd.nist.gov/vuln/detail/CVE-2022-3358",
+    "namespace": "nvd:cpe",
+    "severity": "High",
+    "urls": [
+     "https://www.openssl.org/news/secadv/20221011.txt",
+     "https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=5485c56679d7c49b96e8fc8ca708b0b7e7c03c4b"
+    ],
+    "description": "OpenSSL supports creating a custom cipher via the legacy EVP_CIPHER_meth_new() function and associated function calls. This function was deprecated in OpenSSL 3.0 and application authors are instead encouraged to use the new provider mechanism in order to implement custom ciphers. OpenSSL versions 3.0.0 to 3.0.5 incorrectly handle legacy custom ciphers passed to the EVP_EncryptInit_ex2(), EVP_DecryptInit_ex2() and EVP_CipherInit_ex2() functions (as well as other similarly named encryption and decryption initialisation functions). Instead of using the custom cipher directly it incorrectly tries to fetch an equivalent cipher from the available providers. An equivalent cipher is found based on the NID passed to EVP_CIPHER_meth_new(). This NID is supposed to represent the unique NID for a given cipher. However it is possible for an application to incorrectly pass NID_undef as this value in the call to EVP_CIPHER_meth_new(). When NID_undef is used in this way the OpenSSL encryption/decryption initialisation function will match the NULL cipher as being equivalent and will fetch this from the available providers. This will succeed if the default provider has been loaded (or if a third party provider has been loaded that offers this cipher). Using the NULL cipher means that the plaintext is emitted as the ciphertext. Applications are only affected by this issue if they call EVP_CIPHER_meth_new() using NID_undef and subsequently use it in a call to an encryption/decryption initialisation function. Applications that only use SSL/TLS are not impacted by this issue. Fixed in OpenSSL 3.0.6 (Affected 3.0.0-3.0.5).",
+    "cvss": [
+     {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "metrics": {
+       "baseScore": 7.5,
+       "exploitabilityScore": 3.9,
+       "impactScore": 3.6
+      },
+      "vendorMetadata": {}
+     }
+    ],
+    "fix": {
+     "versions": [],
+     "state": "unknown"
+    },
+    "advisories": []
+   },
+   "relatedVulnerabilities": [],
+   "matchDetails": [
+    {
+     "type": "cpe-match",
+     "matcher": "apk-matcher",
+     "searchedBy": {
+      "namespace": "nvd:cpe",
+      "cpes": [
+       "cpe:2.3:a:openssl:openssl:3.0.5-r3:*:*:*:*:*:*:*"
+      ]
+     },
+     "found": {
+      "versionConstraint": ">= 3.0.0, < 3.0.6 (unknown)",
+      "cpes": [
+       "cpe:2.3:a:openssl:openssl:*:*:*:*:*:*:*:*"
+      ]
+     }
+    }
+   ],
+   "artifact": {
+    "name": "libcrypto3",
+    "version": "3.0.5-r3",
+    "type": "apk",
+    "locations": [
+     {
+      "path": "/lib/apk/db/installed",
+      "layerID": "sha256:8793f808fe684624cec59b1332ddf92215b8b282295998e7285f2495552501a4"
+     }
+    ],
+    "language": "",
+    "licenses": [
+     "Apache-2.0"
+    ],
+    "cpes": [
+     "cpe:2.3:a:libcrypto3:libcrypto3:3.0.5-r3:*:*:*:*:*:*:*"
+    ],
+    "purl": "pkg:alpine/libcrypto3@3.0.5-r3?arch=x86_64&upstream=openssl&distro=alpine-3.17_alpha20220809",
+    "upstreams": [
+     {
+      "name": "openssl"
+     }
+    ]
+   }
+  },
+  {
+   "vulnerability": {
+    "id": "CVE-2022-3358",
+    "dataSource": "https://nvd.nist.gov/vuln/detail/CVE-2022-3358",
+    "namespace": "nvd:cpe",
+    "severity": "High",
+    "urls": [
+     "https://www.openssl.org/news/secadv/20221011.txt",
+     "https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=5485c56679d7c49b96e8fc8ca708b0b7e7c03c4b"
+    ],
+    "description": "OpenSSL supports creating a custom cipher via the legacy EVP_CIPHER_meth_new() function and associated function calls. This function was deprecated in OpenSSL 3.0 and application authors are instead encouraged to use the new provider mechanism in order to implement custom ciphers. OpenSSL versions 3.0.0 to 3.0.5 incorrectly handle legacy custom ciphers passed to the EVP_EncryptInit_ex2(), EVP_DecryptInit_ex2() and EVP_CipherInit_ex2() functions (as well as other similarly named encryption and decryption initialisation functions). Instead of using the custom cipher directly it incorrectly tries to fetch an equivalent cipher from the available providers. An equivalent cipher is found based on the NID passed to EVP_CIPHER_meth_new(). This NID is supposed to represent the unique NID for a given cipher. However it is possible for an application to incorrectly pass NID_undef as this value in the call to EVP_CIPHER_meth_new(). When NID_undef is used in this way the OpenSSL encryption/decryption initialisation function will match the NULL cipher as being equivalent and will fetch this from the available providers. This will succeed if the default provider has been loaded (or if a third party provider has been loaded that offers this cipher). Using the NULL cipher means that the plaintext is emitted as the ciphertext. Applications are only affected by this issue if they call EVP_CIPHER_meth_new() using NID_undef and subsequently use it in a call to an encryption/decryption initialisation function. Applications that only use SSL/TLS are not impacted by this issue. Fixed in OpenSSL 3.0.6 (Affected 3.0.0-3.0.5).",
+    "cvss": [
+     {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "metrics": {
+       "baseScore": 7.5,
+       "exploitabilityScore": 3.9,
+       "impactScore": 3.6
+      },
+      "vendorMetadata": {}
+     }
+    ],
+    "fix": {
+     "versions": [],
+     "state": "unknown"
+    },
+    "advisories": []
+   },
+   "relatedVulnerabilities": [],
+   "matchDetails": [
+    {
+     "type": "cpe-match",
+     "matcher": "apk-matcher",
+     "searchedBy": {
+      "namespace": "nvd:cpe",
+      "cpes": [
+       "cpe:2.3:a:openssl:openssl:3.0.5-r3:*:*:*:*:*:*:*"
+      ]
+     },
+     "found": {
+      "versionConstraint": ">= 3.0.0, < 3.0.6 (unknown)",
+      "cpes": [
+       "cpe:2.3:a:openssl:openssl:*:*:*:*:*:*:*:*"
+      ]
+     }
+    }
+   ],
+   "artifact": {
+    "name": "libssl3",
+    "version": "3.0.5-r3",
+    "type": "apk",
+    "locations": [
+     {
+      "path": "/lib/apk/db/installed",
+      "layerID": "sha256:8793f808fe684624cec59b1332ddf92215b8b282295998e7285f2495552501a4"
+     }
+    ],
+    "language": "",
+    "licenses": [
+     "Apache-2.0"
+    ],
+    "cpes": [
+     "cpe:2.3:a:libssl3:libssl3:3.0.5-r3:*:*:*:*:*:*:*"
+    ],
+    "purl": "pkg:alpine/libssl3@3.0.5-r3?arch=x86_64&upstream=openssl&distro=alpine-3.17_alpha20220809",
+    "upstreams": [
+     {
+      "name": "openssl"
+     }
+    ]
+   }
+  },
+  {
+   "vulnerability": {
+    "id": "CVE-2022-36056",
+    "dataSource": "https://nvd.nist.gov/vuln/detail/CVE-2022-36056",
+    "namespace": "nvd:cpe",
+    "severity": "Medium",
+    "urls": [
+     "https://github.com/sigstore/cosign/commit/80b79ed8b4d28ccbce3d279fd273606b5cddcc25",
+     "https://github.com/sigstore/cosign/security/advisories/GHSA-8gw7-4j42-w388"
+    ],
+    "description": "Cosign is a project under the sigstore organization which aims to make signatures invisible infrastructure. In versions prior to 1.12.0 a number of vulnerabilities have been found in cosign verify-blob, where Cosign would successfully verify an artifact when verification should have failed. First a cosign bundle can be crafted to successfully verify a blob even if the embedded rekorBundle does not reference the given signature. Second, when providing identity flags, the email and issuer of a certificate is not checked when verifying a Rekor bundle, and the GitHub Actions identity is never checked. Third, providing an invalid Rekor bundle without the experimental flag results in a successful verification. And fourth an invalid transparency log entry will result in immediate success for verification. Details and examples of these issues can be seen in the GHSA-8gw7-4j42-w388 advisory linked. Users are advised to upgrade to 1.12.0. There are no known workarounds for these issues.",
+    "cvss": [
+     {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+      "metrics": {
+       "baseScore": 5.5,
+       "exploitabilityScore": 1.8,
+       "impactScore": 3.6
+      },
+      "vendorMetadata": {}
+     }
+    ],
+    "fix": {
+     "versions": [],
+     "state": "unknown"
+    },
+    "advisories": []
+   },
+   "relatedVulnerabilities": [],
+   "matchDetails": [
+    {
+     "type": "cpe-match",
+     "matcher": "go-module-matcher",
+     "searchedBy": {
+      "namespace": "nvd:cpe",
+      "cpes": [
+       "cpe:2.3:a:sigstore:cosign:v1.11.0:*:*:*:*:*:*:*"
+      ]
+     },
+     "found": {
+      "versionConstraint": "< 1.12.0 (unknown)",
+      "cpes": [
+       "cpe:2.3:a:sigstore:cosign:*:*:*:*:*:*:*:*"
+      ]
+     }
+    }
+   ],
+   "artifact": {
+    "name": "github.com/sigstore/cosign",
+    "version": "v1.11.0",
+    "type": "go-module",
+    "locations": [
+     {
+      "path": "/usr/bin/ko",
+      "layerID": "sha256:8793f808fe684624cec59b1332ddf92215b8b282295998e7285f2495552501a4"
+     }
+    ],
+    "language": "go",
+    "licenses": [],
+    "cpes": [
+     "cpe:2.3:a:sigstore:cosign:v1.11.0:*:*:*:*:*:*:*"
+    ],
+    "purl": "pkg:golang/github.com/sigstore/cosign@v1.11.0",
+    "upstreams": [],
+    "metadataType": "GolangBinMetadata",
+    "metadata": {
+     "goCompiledVersion": "go1.19.2",
+     "architecture": "amd64",
+     "mainModule": "github.com/google/ko"
+    }
+   }
+  },
+  {
+   "vulnerability": {
+    "id": "GHSA-3633-5h82-39pq",
+    "dataSource": "https://github.com/advisories/GHSA-3633-5h82-39pq",
+    "namespace": "github:language:go",
+    "severity": "Low",
+    "urls": [
+     "https://github.com/advisories/GHSA-3633-5h82-39pq"
+    ],
+    "description": "Improper handling of different key IDs for the same public keys in attacker-controlled metadata",
+    "cvss": [],
+    "fix": {
+     "versions": [
+      "0.3.2"
+     ],
+     "state": "fixed"
+    },
+    "advisories": []
+   },
+   "relatedVulnerabilities": [],
+   "matchDetails": [
+    {
+     "type": "exact-direct-match",
+     "matcher": "go-module-matcher",
+     "searchedBy": {
+      "language": "go",
+      "namespace": "github:language:go"
+     },
+     "found": {
+      "versionConstraint": "<0.3.2 (unknown)"
+     }
+    }
+   ],
+   "artifact": {
+    "name": "github.com/theupdateframework/go-tuf",
+    "version": "v0.3.1",
+    "type": "go-module",
+    "locations": [
+     {
+      "path": "/usr/bin/ko",
+      "layerID": "sha256:8793f808fe684624cec59b1332ddf92215b8b282295998e7285f2495552501a4"
+     }
+    ],
+    "language": "go",
+    "licenses": [],
+    "cpes": [
+     "cpe:2.3:a:theupdateframework:go-tuf:v0.3.1:*:*:*:*:*:*:*",
+     "cpe:2.3:a:theupdateframework:go_tuf:v0.3.1:*:*:*:*:*:*:*"
+    ],
+    "purl": "pkg:golang/github.com/theupdateframework/go-tuf@v0.3.1",
+    "upstreams": [],
+    "metadataType": "GolangBinMetadata",
+    "metadata": {
+     "goCompiledVersion": "go1.19.2",
+     "architecture": "amd64",
+     "mainModule": "github.com/google/ko"
+    }
+   }
+  },
+  {
+   "vulnerability": {
+    "id": "GHSA-8gw7-4j42-w388",
+    "dataSource": "https://github.com/advisories/GHSA-8gw7-4j42-w388",
+    "namespace": "github:language:go",
+    "severity": "Medium",
+    "urls": [
+     "https://github.com/advisories/GHSA-8gw7-4j42-w388"
+    ],
+    "description": "Cosign bundle can be crafted to successfully verify a blob even if the embedded rekorBundle does not reference the given signature",
+    "cvss": [],
+    "fix": {
+     "versions": [
+      "1.12.0"
+     ],
+     "state": "fixed"
+    },
+    "advisories": []
+   },
+   "relatedVulnerabilities": [
+    {
+     "id": "CVE-2022-36056",
+     "dataSource": "https://nvd.nist.gov/vuln/detail/CVE-2022-36056",
+     "namespace": "nvd:cpe",
+     "severity": "Medium",
+     "urls": [
+      "https://github.com/sigstore/cosign/commit/80b79ed8b4d28ccbce3d279fd273606b5cddcc25",
+      "https://github.com/sigstore/cosign/security/advisories/GHSA-8gw7-4j42-w388"
+     ],
+     "description": "Cosign is a project under the sigstore organization which aims to make signatures invisible infrastructure. In versions prior to 1.12.0 a number of vulnerabilities have been found in cosign verify-blob, where Cosign would successfully verify an artifact when verification should have failed. First a cosign bundle can be crafted to successfully verify a blob even if the embedded rekorBundle does not reference the given signature. Second, when providing identity flags, the email and issuer of a certificate is not checked when verifying a Rekor bundle, and the GitHub Actions identity is never checked. Third, providing an invalid Rekor bundle without the experimental flag results in a successful verification. And fourth an invalid transparency log entry will result in immediate success for verification. Details and examples of these issues can be seen in the GHSA-8gw7-4j42-w388 advisory linked. Users are advised to upgrade to 1.12.0. There are no known workarounds for these issues.",
+     "cvss": [
+      {
+       "version": "3.1",
+       "vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+       "metrics": {
+        "baseScore": 5.5,
+        "exploitabilityScore": 1.8,
+        "impactScore": 3.6
+       },
+       "vendorMetadata": {}
+      }
+     ]
+    }
+   ],
+   "matchDetails": [
+    {
+     "type": "exact-direct-match",
+     "matcher": "go-module-matcher",
+     "searchedBy": {
+      "language": "go",
+      "namespace": "github:language:go"
+     },
+     "found": {
+      "versionConstraint": "<=1.11.1 (unknown)"
+     }
+    }
+   ],
+   "artifact": {
+    "name": "github.com/sigstore/cosign",
+    "version": "v1.11.0",
+    "type": "go-module",
+    "locations": [
+     {
+      "path": "/usr/bin/ko",
+      "layerID": "sha256:8793f808fe684624cec59b1332ddf92215b8b282295998e7285f2495552501a4"
+     }
+    ],
+    "language": "go",
+    "licenses": [],
+    "cpes": [
+     "cpe:2.3:a:sigstore:cosign:v1.11.0:*:*:*:*:*:*:*"
+    ],
+    "purl": "pkg:golang/github.com/sigstore/cosign@v1.11.0",
+    "upstreams": [],
+    "metadataType": "GolangBinMetadata",
+    "metadata": {
+     "goCompiledVersion": "go1.19.2",
+     "architecture": "amd64",
+     "mainModule": "github.com/google/ko"
+    }
+   }
+  }
+ ],
+ "source": {
+  "type": "image",
+  "target": {
+   "userInput": "cgr.dev/chainguard/ko:latest",
+   "imageID": "sha256:926858009f52574cef245a48be2a0dcddf28a7cbbba716b7241c37daf1e515b0",
+   "manifestDigest": "sha256:8f823142153cc4f74518da833f411bcb238913be9b463eca7ddb2d2028129dea",
+   "mediaType": "application/vnd.oci.image.manifest.v1+json",
+   "tags": [],
+   "imageSize": 692897756,
+   "layers": [
+    {
+     "mediaType": "application/vnd.oci.image.layer.v1.tar+gzip",
+     "digest": "sha256:8793f808fe684624cec59b1332ddf92215b8b282295998e7285f2495552501a4",
+     "size": 692897756
+    }
+   ],
+   "manifest": "eyJzY2hlbWFWZXJzaW9uIjoyLCJtZWRpYVR5cGUiOiJhcHBsaWNhdGlvbi92bmQub2NpLmltYWdlLm1hbmlmZXN0LnYxK2pzb24iLCJjb25maWciOnsibWVkaWFUeXBlIjoiYXBwbGljYXRpb24vdm5kLm9jaS5pbWFnZS5jb25maWcudjEranNvbiIsInNpemUiOjUzOCwiZGlnZXN0Ijoic2hhMjU2OjkyNjg1ODAwOWY1MjU3NGNlZjI0NWE0OGJlMmEwZGNkZGYyOGE3Y2JiYmE3MTZiNzI0MWMzN2RhZjFlNTE1YjAifSwibGF5ZXJzIjpbeyJtZWRpYVR5cGUiOiJhcHBsaWNhdGlvbi92bmQub2NpLmltYWdlLmxheWVyLnYxLnRhcitnemlwIiwic2l6ZSI6MjExNTE3MDIwLCJkaWdlc3QiOiJzaGEyNTY6OGRmM2Y3M2U2NTZiNjQwOTI5Zjg1YmEwMWUwYWYyNmNkY2ZiMDE2MGI0OGYwYTkxYzEyMjRjNjJiYTk0ZGJjNyJ9XSwiYW5ub3RhdGlvbnMiOnsib3JnLm9wZW5jb250YWluZXJzLmltYWdlLnJldmlzaW9uIjoiMjdiMGFjZDQ2NmE5NTFhYWFlN2ZhNjJmMDg2NjE0MjA0NWZmMGEzNSIsIm9yZy5vcGVuY29udGFpbmVycy5pbWFnZS5zb3VyY2UiOiJodHRwczovL2dpdGh1Yi5jb20vY2hhaW5ndWFyZC1pbWFnZXMva28ifX0=",
+   "config": "eyJhcmNoaXRlY3R1cmUiOiJhbWQ2NCIsImF1dGhvciI6ImdpdGh1Yi5jb20vY2hhaW5ndWFyZC1kZXYvYXBrbyIsImNyZWF0ZWQiOiIyMDIyLTEwLTIwVDIwOjE0OjMwWiIsImhpc3RvcnkiOlt7ImF1dGhvciI6ImFwa28iLCJjcmVhdGVkIjoiMjAyMi0xMC0yMFQyMDoxNDozMFoiLCJjcmVhdGVkX2J5IjoiYXBrbyIsImNvbW1lbnQiOiJUaGlzIGlzIGFuIGFwa28gc2luZ2xlLWxheWVyIGltYWdlIn1dLCJvcyI6ImxpbnV4Iiwicm9vdGZzIjp7InR5cGUiOiJsYXllcnMiLCJkaWZmX2lkcyI6WyJzaGEyNTY6ODc5M2Y4MDhmZTY4NDYyNGNlYzU5YjEzMzJkZGY5MjIxNWI4YjI4MjI5NTk5OGU3Mjg1ZjI0OTU1NTI1MDFhNCJdfSwiY29uZmlnIjp7IkVudHJ5cG9pbnQiOlsiL3Vzci9iaW4va28iXSwiRW52IjpbIlBBVEg9L3Vzci9sb2NhbC9zYmluOi91c3IvbG9jYWwvYmluOi91c3Ivc2JpbjovdXNyL2Jpbjovc2JpbjovYmluIiwiU1NMX0NFUlRfRklMRT0vZXRjL3NzbC9jZXJ0cy9jYS1jZXJ0aWZpY2F0ZXMuY3J0Il0sIlVzZXIiOiI2NTUzMiJ9fQ==",
+   "repoDigests": [
+    "cgr.dev/chainguard/ko@sha256:232c0bb9e854a46b17f09014f46be49f48761018c19d6fe6328edf3b477b670c"
+   ],
+   "architecture": "",
+   "os": ""
+  }
+ },
+ "distro": {
+  "name": "alpine",
+  "version": "",
+  "idLike": []
+ },
+ "descriptor": {
+  "name": "grype",
+  "version": "0.51.0",
+  "configuration": {
+   "configPath": "",
+   "output": "json",
+   "file": "",
+   "distro": "",
+   "add-cpes-if-none": false,
+   "output-template-file": "",
+   "quiet": true,
+   "check-for-app-update": true,
+   "only-fixed": false,
+   "only-notfixed": false,
+   "platform": "",
+   "search": {
+    "scope": "Squashed",
+    "unindexed-archives": false,
+    "indexed-archives": true
+   },
+   "ignore": null,
+   "exclude": [],
+   "db": {
+    "cache-dir": "/Users/dan/Library/Caches/grype/db",
+    "update-url": "https://toolbox-data.anchore.io/grype/databases/listing.json",
+    "ca-cert": "",
+    "auto-update": true,
+    "validate-by-hash-on-start": false,
+    "validate-age": true,
+    "max-allowed-built-age": 432000000000000
+   },
+   "externalSources": {
+    "enable": false,
+    "maven": {
+     "searchUpstreamBySha1": true,
+     "baseUrl": "https://search.maven.org/solrsearch/select"
+    }
+   },
+   "match": {
+    "java": {
+     "using-cpes": true
+    },
+    "dotnet": {
+     "using-cpes": true
+    },
+    "golang": {
+     "using-cpes": true
+    },
+    "javascript": {
+     "using-cpes": true
+    },
+    "python": {
+     "using-cpes": true
+    },
+    "ruby": {
+     "using-cpes": true
+    },
+    "stock": {
+     "using-cpes": true
+    }
+   },
+   "dev": {
+    "profile-cpu": false,
+    "profile-mem": false
+   },
+   "fail-on-severity": "",
+   "registry": {
+    "insecure-skip-tls-verify": false,
+    "insecure-use-http": false,
+    "auth": []
+   },
+   "log": {
+    "structured": false,
+    "level": "",
+    "file": ""
+   },
+   "attestation": {
+    "public-key": "",
+    "skip-verification": false
+   }
+  },
+  "db": {
+   "built": "2022-10-20T08:20:05Z",
+   "schemaVersion": 5,
+   "location": "/Users/dan/Library/Caches/grype/db/5",
+   "checksum": "sha256:916594116e3f8f5d5ddf46fbbcaa2dfac38b5dc7cb434a4e9ca6ecaecb484929",
+   "error": null
+  }
+ }
+}
