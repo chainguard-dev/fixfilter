@@ -1,10 +1,14 @@
 package main
 
 import (
+	"bytes"
 	"fmt"
-	"github.com/chainguard-dev/fixfilter/pkg/fixfilter"
 	"github.com/chainguard-dev/fixfilter/pkg/grype"
+	"github.com/chainguard-dev/fixfilter/pkg/parsing/types"
 	"github.com/chainguard-dev/fixfilter/pkg/secdb"
+	"github.com/chainguard-dev/fixfilter/pkg/split"
+	"github.com/chainguard-dev/fixfilter/pkg/trivy"
+	"github.com/hashicorp/go-multierror"
 	"github.com/pkg/errors"
 	"github.com/spf13/cobra"
 	"io"
@@ -26,26 +30,22 @@ func rootCmd() *cobra.Command {
 		Args:          cobra.ExactArgs(1),
 		RunE:          runRoot,
 		SilenceErrors: true,
+		SilenceUsage:  true,
 	}
 
 	return &cmd
 }
 
 func runRoot(cmd *cobra.Command, args []string) error {
-	input := args[0]
+	pathSpecifier := args[0]
 
-	jsonReadCloser, err := getJSON(input)
+	rc, err := getResultData(pathSpecifier)
 	if err != nil {
 		return err
 	}
-	defer jsonReadCloser.Close()
+	defer rc.Close()
 
-	result, err := grype.ResultFromJSON(jsonReadCloser)
-	if err != nil {
-		return err
-	}
-
-	err = fixfilter.CheckWolfi(result)
+	matches, err := tryAllParsers(rc)
 	if err != nil {
 		return err
 	}
@@ -55,10 +55,10 @@ func runRoot(cmd *cobra.Command, args []string) error {
 		return err
 	}
 
-	validApkMatches, invalidatedApkMatches, nonApkMatches := fixfilter.Split(result, secdbClient)
+	validApkMatches, invalidatedApkMatches, nonApkMatches := split.Split(matches, secdbClient)
 
 	if len(validApkMatches) > 0 {
-		fmt.Println("⚠️  Legit vulnerabilities (apk):")
+		fmt.Println("⚠️  Legit vulnerabilities:")
 		for _, m := range validApkMatches {
 			fmt.Println("   • " + renderMatch(m))
 		}
@@ -66,7 +66,7 @@ func runRoot(cmd *cobra.Command, args []string) error {
 	}
 
 	if len(invalidatedApkMatches) > 0 {
-		fmt.Println("✅ Fixed vulnerabilities (apk):")
+		fmt.Println("✅ Fixed vulnerabilities:")
 		for _, m := range invalidatedApkMatches {
 			fmt.Println("   • " + renderMatch(m))
 		}
@@ -84,11 +84,11 @@ func runRoot(cmd *cobra.Command, args []string) error {
 	return nil
 }
 
-func renderMatch(m fixfilter.Match) string {
+func renderMatch(m types.Match) string {
 	return fmt.Sprintf("%s (%s): %s", m.Package.Name, m.Package.Version, m.Vulnerability.ID)
 }
 
-func getJSON(input string) (io.ReadCloser, error) {
+func getResultData(input string) (io.ReadCloser, error) {
 	if input == "-" {
 		// read from STDIN
 		return io.NopCloser(os.Stdin), nil
@@ -96,8 +96,38 @@ func getJSON(input string) (io.ReadCloser, error) {
 
 	f, err := os.Open(input)
 	if err != nil {
-		return nil, errors.Wrap(err, "unable to retrieve Grype JSON output")
+		return nil, errors.Wrap(err, "unable to obtain scanner result data")
 	}
 
 	return f, nil
+}
+
+func tryAllParsers(r io.Reader) ([]types.Match, error) {
+	parseFns := []types.Parser{
+		grype.ParseJSON,
+		grype.ParseSARIF,
+		trivy.ParseSARIF,
+	}
+
+	var parseErrs *multierror.Error
+
+	by, err := io.ReadAll(r)
+	if err != nil {
+		return nil, err
+	}
+
+	for _, parse := range parseFns {
+		parserReader := bytes.NewReader(by)
+
+		matches, err := parse(parserReader)
+		if err != nil {
+			parseErrs = multierror.Append(parseErrs, err)
+
+			continue
+		}
+
+		return matches, nil
+	}
+
+	return nil, fmt.Errorf("no parser was able to extract scan result data from input: %w", parseErrs)
 }

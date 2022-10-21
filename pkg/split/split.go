@@ -1,7 +1,7 @@
-package fixfilter
+package split
 
 import (
-	"github.com/anchore/grype/grype/presenter/models"
+	"github.com/chainguard-dev/fixfilter/pkg/parsing/types"
 	"github.com/chainguard-dev/fixfilter/pkg/secdb"
 	apk "github.com/knqyf263/go-apk-version"
 	"log"
@@ -10,17 +10,15 @@ import (
 // Split devices the Grype result matches into three groups (each group is a
 // []Match): APK matches that are valid, APK matches that are invalidated by
 // secdb data, and non-APK matches.
-func Split(result *models.Document, secdbClient *secdb.Client) (validApkMatches []Match, invalidatedApkMatches []Match, NonApkMatches []Match) {
-	if result == nil || secdbClient == nil {
+func Split(matches []types.Match, secdbClient *secdb.Client) (validApkMatches []types.Match, invalidatedApkMatches []types.Match, NonApkMatches []types.Match) {
+	if secdbClient == nil {
 		// TODO: log this
 		return
 	}
 
-	for _, grypeMatch := range result.Matches {
-		m := convert(grypeMatch)
-
+	for _, m := range matches {
 		// This match isn't for an apk package. Separate it out.
-		if m.Package.Type != "apk" {
+		if m.Package.Type != "apk" && m.Package.Type != "" {
 			NonApkMatches = append(NonApkMatches, m)
 			continue
 		}
