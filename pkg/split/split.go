@@ -23,7 +23,14 @@ func Split(matches []types.Match, secdbClient *secdb.Client) (validApkMatches []
 			continue
 		}
 
-		fix := secdbClient.FindFix(m.Package.Name, m.Vulnerability.ID)
+		var fix *string
+
+		// If this package has an "origin" package, use that to find fixes in the secdb.
+		if o := m.Package.Origin; o != "" {
+			fix = secdbClient.FindFix(m.Package.Origin, m.Vulnerability.ID)
+		} else {
+			fix = secdbClient.FindFix(m.Package.Name, m.Vulnerability.ID)
+		}
 
 		// There's no fix for this vulnerability. So it's valid.
 		if fix == nil {

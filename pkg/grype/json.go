@@ -31,12 +31,18 @@ func ParseJSON(r io.Reader) ([]types.Match, error) {
 }
 
 func convert(m models.Match) types.Match {
+	p := types.Package{
+		Name:    m.Artifact.Name,
+		Version: m.Artifact.Version,
+		Type:    string(m.Artifact.Type),
+	}
+
+	if upstreams := m.Artifact.Upstreams; len(upstreams) == 1 {
+		p.Origin = upstreams[0].Name
+	}
+
 	return types.Match{
-		Package: types.Package{
-			Name:    m.Artifact.Name,
-			Version: m.Artifact.Version,
-			Type:    string(m.Artifact.Type),
-		},
+		Package: p,
 		Vulnerability: types.Vulnerability{
 			ID:       m.Vulnerability.ID,
 			Severity: m.Vulnerability.Severity,

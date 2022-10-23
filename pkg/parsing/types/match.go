@@ -6,7 +6,7 @@ type Match struct {
 }
 
 type Package struct {
-	Name, Version, Type string
+	Name, Version, Type, Origin string
 }
 
 type Vulnerability struct {
