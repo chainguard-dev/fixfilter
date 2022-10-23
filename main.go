@@ -104,6 +104,7 @@ func getResultData(input string) (io.ReadCloser, error) {
 
 func tryAllParsers(r io.Reader) ([]types.Match, error) {
 	parseFns := []types.Parser{
+		grype.ParseTable,
 		grype.ParseJSON,
 		grype.ParseSARIF,
 		trivy.ParseSARIF,
