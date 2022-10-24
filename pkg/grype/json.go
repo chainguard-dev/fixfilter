@@ -9,7 +9,7 @@ import (
 	"io"
 )
 
-func ParseJSON(r io.Reader) ([]types.Match, error) {
+func ParseJSON(r io.Reader) (*types.Report, error) {
 	dec := json.NewDecoder(r)
 
 	document := &models.Document{}
@@ -22,12 +22,17 @@ func ParseJSON(r io.Reader) ([]types.Match, error) {
 		return nil, errors.New("input format does not appear to be Grype JSON")
 	}
 
-	var result []types.Match
+	var matches []types.Match
 	for _, m := range document.Matches {
-		result = append(result, convert(m))
+		matches = append(matches, convert(m))
 	}
 
-	return result, nil
+	report := types.Report{
+		Matches: matches,
+		Distro:  document.Distro.Name,
+	}
+
+	return &report, nil
 }
 
 func convert(m models.Match) types.Match {

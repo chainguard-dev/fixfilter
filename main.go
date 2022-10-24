@@ -45,7 +45,7 @@ func runRoot(cmd *cobra.Command, args []string) error {
 	}
 	defer rc.Close()
 
-	matches, err := tryAllParsers(rc)
+	report, err := tryAllParsers(rc)
 	if err != nil {
 		return err
 	}
@@ -55,7 +55,10 @@ func runRoot(cmd *cobra.Command, args []string) error {
 		return err
 	}
 
-	validApkMatches, invalidatedApkMatches, nonApkMatches := split.Split(matches, secdbClient)
+	validApkMatches, invalidatedApkMatches, nonApkMatches, err := split.Split(*report, secdbClient)
+	if err != nil {
+		return fmt.Errorf("unable to split vulnerability matches: %w", err)
+	}
 
 	if len(validApkMatches) > 0 {
 		fmt.Println("⚠️  Legit vulnerabilities:")
@@ -102,7 +105,7 @@ func getResultData(input string) (io.ReadCloser, error) {
 	return f, nil
 }
 
-func tryAllParsers(r io.Reader) ([]types.Match, error) {
+func tryAllParsers(r io.Reader) (*types.Report, error) {
 	parseFns := []types.Parser{
 		grype.ParseTable,
 		grype.ParseJSON,
@@ -120,14 +123,14 @@ func tryAllParsers(r io.Reader) ([]types.Match, error) {
 	for _, parse := range parseFns {
 		parserReader := bytes.NewReader(by)
 
-		matches, err := parse(parserReader)
+		report, err := parse(parserReader)
 		if err != nil {
 			parseErrs = multierror.Append(parseErrs, err)
 
 			continue
 		}
 
-		return matches, nil
+		return report, nil
 	}
 
 	return nil, fmt.Errorf("no parser was able to extract scan result data from input: %w", parseErrs)

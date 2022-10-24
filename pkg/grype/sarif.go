@@ -10,7 +10,7 @@ import (
 	"regexp"
 )
 
-func ParseSARIF(r io.Reader) ([]types.Match, error) {
+func ParseSARIF(r io.Reader) (*types.Report, error) {
 	run, err := sarifHelpers.ExtractRun(r)
 	if err != nil {
 		return nil, fmt.Errorf("unable to parse Grype SARIF: %w", err)
@@ -25,7 +25,16 @@ func ParseSARIF(r io.Reader) ([]types.Match, error) {
 		return nil, err
 	}
 
-	return resultsToMatches(rules, run.Results)
+	matches, err := resultsToMatches(rules, run.Results)
+	if err != nil {
+		return nil, err
+	}
+
+	report := types.Report{
+		Matches: matches,
+	}
+
+	return &report, nil
 }
 
 var resultMessageRegex = regexp.MustCompile(`(?U).*reports (?P<packageName>.*) at version (?P<installedVersion>.*)\s{1,2}which is a vulnerable \((?P<type>.*)\) package installed.*`)

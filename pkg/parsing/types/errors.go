@@ -1,6 +1,9 @@
 package types
 
-import "fmt"
+import (
+	"errors"
+	"fmt"
+)
 
 type ErrWrongParser struct {
 	// expected is the name of the scanner that the current parser was expecting
@@ -20,3 +23,5 @@ func NewErrWrongParser(expected, detected string) error {
 func (e ErrWrongParser) Error() string {
 	return fmt.Sprintf("parser expected scanner to be %q but detected %q instead", e.expected, e.detected)
 }
+
+var ErrNotWolfi = errors.New("vulnerability report describes non-Wolfi packages")

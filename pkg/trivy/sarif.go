@@ -10,7 +10,7 @@ import (
 	"regexp"
 )
 
-func ParseSARIF(r io.Reader) ([]types.Match, error) {
+func ParseSARIF(r io.Reader) (*types.Report, error) {
 	run, err := sarifHelpers.ExtractRun(r)
 	if err != nil {
 		return nil, fmt.Errorf("unable to parse Trivy SARIF: %w", err)
@@ -25,7 +25,16 @@ func ParseSARIF(r io.Reader) ([]types.Match, error) {
 		return nil, err
 	}
 
-	return resultsToMatches(rules, run.Results)
+	matches, err := resultsToMatches(rules, run.Results)
+	if err != nil {
+		return nil, err
+	}
+
+	report := types.Report{
+		Matches: matches,
+	}
+
+	return &report, nil
 }
 
 var resultMessageRegex = regexp.MustCompile(`Package: (?P<packageName>.*)\nInstalled Version: (?P<installedVersion>.*)\n.*\nSeverity: (?P<severity>.*)\n`)

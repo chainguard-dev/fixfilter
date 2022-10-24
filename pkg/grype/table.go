@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-func ParseTable(r io.Reader) ([]types.Match, error) {
+func ParseTable(r io.Reader) (*types.Report, error) {
 	scanner := bufio.NewScanner(r)
 
 	scanner.Scan()
@@ -49,7 +49,11 @@ func ParseTable(r io.Reader) ([]types.Match, error) {
 		return nil, fmt.Errorf("unable to parse input as Grype table format: %w", err)
 	}
 
-	return matches, nil
+	report := types.Report{
+		Matches: matches,
+	}
+
+	return &report, nil
 }
 
 func allRealIndexes(indexes ...int) bool {
