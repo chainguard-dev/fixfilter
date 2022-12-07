@@ -3,30 +3,31 @@ package split
 import (
 	"errors"
 	"fmt"
+	"strings"
+
 	"github.com/chainguard-dev/fixfilter/pkg/parsing/types"
 	"github.com/chainguard-dev/fixfilter/pkg/secdb"
 	apk "github.com/knqyf263/go-apk-version"
-	"strings"
 )
 
 // Split devices the Grype result matches into three groups (each group is a
 // []Match): APK matches that are valid, APK matches that are invalidated by
 // secdb data, and non-APK matches.
-func Split(report types.Report, secdbClient *secdb.Client) (validApkMatches []types.Match, invalidatedApkMatches []types.Match, NonApkMatches []types.Match, err error) {
+func Split(report types.Report, secdbClient *secdb.Client) (*types.CveMatchGroupings, error) {
 	if secdbClient == nil {
-		return nil, nil, nil, errors.New("cannot use nil secdb client")
+		return nil, errors.New("cannot use nil secdb client")
 	}
 
 	if !(strings.EqualFold(report.Distro, types.Wolfi) || report.Distro == "") {
-		return nil, nil, nil, fmt.Errorf("cannot apply Wolfi fix data to non-Wolfi packages: distro is %q", report.Distro)
+		return nil, fmt.Errorf("cannot apply Wolfi fix data to non-Wolfi packages: distro is %q", report.Distro)
 	}
 
 	matches := report.Matches
-
+	var validApkMatches, invalidatedApkMatches, nonApkMatches []types.Match
 	for _, m := range matches {
 		// This match isn't for an apk package. Separate it out.
 		if m.Package.Type != "apk" && m.Package.Type != "" {
-			NonApkMatches = append(NonApkMatches, m)
+			nonApkMatches = append(nonApkMatches, m)
 			continue
 		}
 
@@ -47,11 +48,11 @@ func Split(report types.Report, secdbClient *secdb.Client) (validApkMatches []ty
 
 		pkgVersion, err := apk.NewVersion(m.Package.Version)
 		if err != nil {
-			return nil, nil, nil, fmt.Errorf("unable to determine version of apk package: %w", err)
+			return nil, fmt.Errorf("unable to determine version of apk package: %w", err)
 		}
 		fixVersion, err := apk.NewVersion(*fix)
 		if err != nil {
-			return nil, nil, nil, fmt.Errorf("unable to determine fix version from secdb: %w", err)
+			return nil, fmt.Errorf("unable to determine fix version from secdb: %w", err)
 		}
 
 		if pkgVersion.LessThan(fixVersion) {
@@ -64,5 +65,9 @@ func Split(report types.Report, secdbClient *secdb.Client) (validApkMatches []ty
 		invalidatedApkMatches = append(invalidatedApkMatches, m)
 	}
 
-	return validApkMatches, invalidatedApkMatches, NonApkMatches, nil
+	return &types.CveMatchGroupings{
+		ValidApkMatches:       validApkMatches,
+		InvalidatedApkMatches: invalidatedApkMatches,
+		NonApkMatches:         nonApkMatches,
+	}, nil
 }

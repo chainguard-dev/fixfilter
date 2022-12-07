@@ -63,21 +63,14 @@ func runRoot(vulnReportPath string, output string) error {
 		return err
 	}
 
-	validApkMatches, invalidatedApkMatches, nonApkMatches, err := split.Split(*report, secdbClient)
+	groupings, err := split.Split(*report, secdbClient)
 	if err != nil {
 		return fmt.Errorf("unable to split vulnerability matches: %w", err)
 	}
 
 	switch output {
 	case "json":
-		cves := types.CveMatchGroupings{
-			ValidApkMatches:       validApkMatches,
-			InvalidatedApkMatches: invalidatedApkMatches,
-			NonApkMatches:         nonApkMatches,
-		}
-
-		enc := json.NewEncoder(os.Stdout)
-		err = enc.Encode(cves)
+		err := json.NewEncoder(os.Stdout).Encode(groupings)
 		if err != nil {
 			return err
 		}
@@ -85,28 +78,19 @@ func runRoot(vulnReportPath string, output string) error {
 		return nil
 
 	case "pretty":
-		if len(validApkMatches) > 0 {
+		if matches := groupings.ValidApkMatches; len(matches) > 0 {
 			fmt.Println("⚠️  Legit vulnerabilities:")
-			for _, m := range validApkMatches {
-				fmt.Println("   • " + renderMatch(m))
-			}
-			fmt.Println()
+			printMatches(matches)
 		}
 
-		if len(invalidatedApkMatches) > 0 {
+		if matches := groupings.InvalidatedApkMatches; len(matches) > 0 {
 			fmt.Println("✅ Fixed vulnerabilities:")
-			for _, m := range invalidatedApkMatches {
-				fmt.Println("   • " + renderMatch(m))
-			}
-			fmt.Println()
+			printMatches(matches)
 		}
 
-		if len(nonApkMatches) > 0 {
+		if matches := groupings.NonApkMatches; len(matches) > 0 {
 			fmt.Println("🙈 Non-apk vulnerabilities:")
-			for _, m := range nonApkMatches {
-				fmt.Println("   • " + renderMatch(m))
-			}
-			fmt.Println()
+			printMatches(matches)
 		}
 
 		return nil
@@ -118,6 +102,13 @@ func runRoot(vulnReportPath string, output string) error {
 
 func renderMatch(m types.Match) string {
 	return fmt.Sprintf("%s (%s): %s", m.Package.Name, m.Package.Version, m.Vulnerability.ID)
+}
+
+func printMatches(ms []types.Match) {
+	for _, m := range ms {
+		fmt.Println("   • " + renderMatch(m))
+	}
+	fmt.Println()
 }
 
 func getResultData(input string) (io.ReadCloser, error) {
