@@ -20,3 +20,9 @@ type Vulnerability struct {
 	ID       string
 	Severity string
 }
+
+type CveMatchGroupings struct {
+	ValidApkMatches       []Match
+	InvalidatedApkMatches []Match
+	NonApkMatches         []Match
+}

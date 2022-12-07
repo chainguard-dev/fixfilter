@@ -62,8 +62,14 @@ func runRoot(cmd *cobra.Command, args []string) error {
 		return fmt.Errorf("unable to split vulnerability matches: %w", err)
 	}
 
+	cves := types.CveMatchGroupings{
+		ValidApkMatches:       validApkMatches,
+		InvalidatedApkMatches: invalidatedApkMatches,
+		NonApkMatches:         nonApkMatches,
+	}
+
 	enc := json.NewEncoder(os.Stdout)
-	err = enc.Encode(validApkMatches)
+	err = enc.Encode(cves)
 	if err != nil {
 		return err
 	}
