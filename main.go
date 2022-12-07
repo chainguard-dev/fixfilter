@@ -32,8 +32,10 @@ func rootCmd() *cobra.Command {
 		Example: "grype -q cgr.dev/chainguard/ko:latest | fixfilter -",
 		Short:   "Use the Wolfi secdb to filter vulnerability scan (JSON) results from Grype",
 		Args:    cobra.ExactArgs(1),
-		RunE: func(cmd *cobra.Command, args []string) error {
-			return runRoot(cmd, args, output)
+		RunE: func(_ *cobra.Command, args []string) error {
+			vulnReportPath := args[0]
+
+			return runRoot(vulnReportPath, output)
 		},
 		SilenceErrors: true,
 		SilenceUsage:  true,
@@ -44,10 +46,8 @@ func rootCmd() *cobra.Command {
 	return &cmd
 }
 
-func runRoot(cmd *cobra.Command, args []string, output string) error {
-	pathSpecifier := args[0]
-
-	rc, err := getResultData(pathSpecifier)
+func runRoot(vulnReportPath string, output string) error {
+	rc, err := getResultData(vulnReportPath)
 	if err != nil {
 		return err
 	}
@@ -83,7 +83,7 @@ func runRoot(cmd *cobra.Command, args []string, output string) error {
 		}
 
 		return nil
-		
+
 	case "pretty":
 		if len(validApkMatches) > 0 {
 			fmt.Println("⚠️  Legit vulnerabilities:")
