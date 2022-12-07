@@ -2,7 +2,11 @@ package main
 
 import (
 	"bytes"
+	"encoding/json"
 	"fmt"
+	"io"
+	"os"
+
 	"github.com/chainguard-dev/fixfilter/pkg/grype"
 	"github.com/chainguard-dev/fixfilter/pkg/parsing/types"
 	"github.com/chainguard-dev/fixfilter/pkg/secdb"
@@ -11,8 +15,6 @@ import (
 	"github.com/hashicorp/go-multierror"
 	"github.com/pkg/errors"
 	"github.com/spf13/cobra"
-	"io"
-	"os"
 )
 
 func main() {
@@ -59,6 +61,14 @@ func runRoot(cmd *cobra.Command, args []string) error {
 	if err != nil {
 		return fmt.Errorf("unable to split vulnerability matches: %w", err)
 	}
+
+	enc := json.NewEncoder(os.Stdout)
+	err = enc.Encode(validApkMatches)
+	if err != nil {
+		return err
+	}
+
+	return nil
 
 	if len(validApkMatches) > 0 {
 		fmt.Println("⚠️  Legit vulnerabilities:")
