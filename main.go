@@ -2,7 +2,11 @@ package main
 
 import (
 	"bytes"
+	"encoding/json"
 	"fmt"
+	"io"
+	"os"
+
 	"github.com/chainguard-dev/fixfilter/pkg/grype"
 	"github.com/chainguard-dev/fixfilter/pkg/parsing/types"
 	"github.com/chainguard-dev/fixfilter/pkg/secdb"
@@ -11,8 +15,6 @@ import (
 	"github.com/hashicorp/go-multierror"
 	"github.com/pkg/errors"
 	"github.com/spf13/cobra"
-	"io"
-	"os"
 )
 
 func main() {
@@ -23,23 +25,29 @@ func main() {
 }
 
 func rootCmd() *cobra.Command {
+	var output string
+
 	cmd := cobra.Command{
-		Use:           "fixfilter { - | path-to-Grype-JSON-file }",
-		Example:       "grype -q cgr.dev/chainguard/ko:latest | fixfilter -",
-		Short:         "Use the Wolfi secdb to filter vulnerability scan (JSON) results from Grype",
-		Args:          cobra.ExactArgs(1),
-		RunE:          runRoot,
+		Use:     "fixfilter { - | path-to-Grype-JSON-file }",
+		Example: "grype -q cgr.dev/chainguard/ko:latest | fixfilter -",
+		Short:   "Use the Wolfi secdb to filter vulnerability scan (JSON) results from Grype",
+		Args:    cobra.ExactArgs(1),
+		RunE: func(_ *cobra.Command, args []string) error {
+			vulnReportPath := args[0]
+
+			return runRoot(vulnReportPath, output)
+		},
 		SilenceErrors: true,
 		SilenceUsage:  true,
 	}
 
+	cmd.Flags().StringVarP(&output, "output", "o", "pretty", "output format [json, pretty]")
+
 	return &cmd
 }
 
-func runRoot(cmd *cobra.Command, args []string) error {
-	pathSpecifier := args[0]
-
-	rc, err := getResultData(pathSpecifier)
+func runRoot(vulnReportPath string, output string) error {
+	rc, err := getResultData(vulnReportPath)
 	if err != nil {
 		return err
 	}
@@ -55,40 +63,52 @@ func runRoot(cmd *cobra.Command, args []string) error {
 		return err
 	}
 
-	validApkMatches, invalidatedApkMatches, nonApkMatches, err := split.Split(*report, secdbClient)
+	groupings, err := split.Split(*report, secdbClient)
 	if err != nil {
 		return fmt.Errorf("unable to split vulnerability matches: %w", err)
 	}
 
-	if len(validApkMatches) > 0 {
-		fmt.Println("⚠️  Legit vulnerabilities:")
-		for _, m := range validApkMatches {
-			fmt.Println("   • " + renderMatch(m))
+	switch output {
+	case "json":
+		err := json.NewEncoder(os.Stdout).Encode(groupings)
+		if err != nil {
+			return err
 		}
-		fmt.Println()
-	}
 
-	if len(invalidatedApkMatches) > 0 {
-		fmt.Println("✅ Fixed vulnerabilities:")
-		for _, m := range invalidatedApkMatches {
-			fmt.Println("   • " + renderMatch(m))
+		return nil
+
+	case "pretty":
+		if matches := groupings.ValidApkMatches; len(matches) > 0 {
+			fmt.Println("⚠️  Legit vulnerabilities:")
+			printMatches(matches)
 		}
-		fmt.Println()
-	}
 
-	if len(nonApkMatches) > 0 {
-		fmt.Println("🙈 Non-apk vulnerabilities:")
-		for _, m := range nonApkMatches {
-			fmt.Println("   • " + renderMatch(m))
+		if matches := groupings.InvalidatedApkMatches; len(matches) > 0 {
+			fmt.Println("✅ Fixed vulnerabilities:")
+			printMatches(matches)
 		}
-		fmt.Println()
-	}
 
-	return nil
+		if matches := groupings.NonApkMatches; len(matches) > 0 {
+			fmt.Println("🙈 Non-apk vulnerabilities:")
+			printMatches(matches)
+		}
+
+		return nil
+
+	default:
+		return fmt.Errorf("unrecognized output format %q", output)
+	}
 }
 
 func renderMatch(m types.Match) string {
 	return fmt.Sprintf("%s (%s): %s", m.Package.Name, m.Package.Version, m.Vulnerability.ID)
+}
+
+func printMatches(ms []types.Match) {
+	for _, m := range ms {
+		fmt.Println("   • " + renderMatch(m))
+	}
+	fmt.Println()
 }
 
 func getResultData(input string) (io.ReadCloser, error) {

@@ -1,5 +1,7 @@
 package types
 
+import "encoding/json"
+
 type Report struct {
 	Matches []Match
 	Distro  string
@@ -19,4 +21,20 @@ type Package struct {
 type Vulnerability struct {
 	ID       string
 	Severity string
+}
+
+type CveMatchGroupings struct {
+	ValidApkMatches       Matches
+	InvalidatedApkMatches Matches
+	NonApkMatches         Matches
+}
+
+type Matches []Match
+
+func (m Matches) MarshalJSON() ([]byte, error) {
+	if m == nil {
+		return json.Marshal([]Match{})
+	}
+
+	return json.Marshal([]Match(m))
 }
