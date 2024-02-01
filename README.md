@@ -1,4 +1,7 @@
-# fixfilter
+# fixfilter (ARCHIVED)
+
+> [!WARNING]
+> This project is no longer maintained and should not be used. This tool has been obviated by first-class support for Wolfi in [Trivy](https://github.com/aquasecurity/trivy) and [Grype](https://github.com/anchore/grype).
 
 Apply Wolfi's secfixes data to vulnerability scanner results
 
